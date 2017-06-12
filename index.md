@@ -9,7 +9,7 @@ permalink: /
   <div class="row">
     <div class="column">
       <h2>Conor Sloan ~ Software Developer</h2>
-      <p>Experienced multi-discipline Software Engineer @ <a href="">Apple</a>. Previously <a href="">Amazon</a>, <a href="">BT</a>, <a href="">Oracle</a>.</p>
+      <p>Experienced multi-discipline Software Engineer @ <a href="">Apple</a>. Previously <a href="">Amazon</a>, <a href="">BT</a>, <a href="">Oracle</a>.</p><hr/>
 
       <h3>Highlights</h3>
       <ul>
@@ -100,14 +100,241 @@ permalink: /
       <h3> Education </h3>
 
       <h4> BSc Computer Science @ <a href="">University of Leeds</a></h4>
+      <p>Attained an overall 1st, winning the Cook Prize for best performance in the final year.</p>
+      <table class="u-full-width">
+                    <tbody><tr>
+                        <th>
+                            Module
+                        </th>
+                        <th>
+                            Grade
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Final Year Project - An Evaluation of OpenStack
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Parallel Scientific Computing
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Natural Language Processing
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Biological &amp; Bio-Inspired Computation
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Distributed Systems
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Knowledge Representation
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            User Adaptive Intelligent Systems
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Artificial Intelligence
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Interactive Database Systems
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Software Systems Engineering
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Theoretical Computer Science
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Practical Problem Solving
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Core Programming
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Modelling, Analysis &amp; Algorithm Design
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Maths for Computing
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Project Management
+                        </td>
+                        <td>
+                            1st
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Numerical Computation &amp; Visualisation
+                        </td>
+                        <td>
+                            2:1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Professional Development
+                        </td>
+                        <td>
+                            2:1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Computer Systems
+                        </td>
+                        <td>
+                            2:1
+                        </td>
+                    </tr>
+                </tbody></table>
 
-      <h4> A Levels in Computing, Economics, Law, Maths (AS) @ <a href="">Calday Grange Grammar School</a></h4>
+      <h4> A Levels @ <a href="">Calday Grange Grammar School</a></h4>
+
+      <p>Attained 4 A Levels, and 11 GCSEs A-C. Won the Computing Award for highest grade at A Level.</p>
+      <table class="u-full-width">
+        <tbody><tr>
+            <th>
+                Subject
+            </th>
+            <th>
+                Grade
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Computing
+            </td>
+            <td>
+                A
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Economics
+            </td>
+            <td>
+                A
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Law
+            </td>
+            <td>
+                A
+            </td>
+        </tr>
+        <tr>
+            <td>
+                General Studies
+            </td>
+            <td>
+                A*
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Mathematics (AS)
+            </td>
+            <td>
+                B
+            </td>
+        </tr>
+      </tbody>
+    </table>
 
       <h3> See also </h3>
 
       <h4> Links </h4>
 
-      <h4> Contact </h4>
+      <ul>
+        <li><a href="https://drive.google.com/file/d/0B2HMk1AmTvyAMEJTbjNXVUNTOFU/view?usp=sharing">Curriculum Vitae</a> </li>
+        <li><a href="https://vlebb.leeds.ac.uk/bbcswebdav/orgs/SCH_Computing/FYProj/reports/1314/Sloan.pdf">An Evaluation of OpenStack</a> - my final year paper, awarded a 1st. </li>
+        <li><a href="https://drive.google.com/file/d/0B2HMk1AmTvyATFFicUVXbUtzZ3M/view?usp=sharing">Personal Recommendation</a> - from a Principal Engineer I worked with at Oracle. </li>
+      </ul>
 
+      <h4> Contact </h4>
+      <ul>
+        <li><a href="https://github.com/csloan7597">GitHub</a></li>
+        <li><a href="http://uk.linkedin.com/in/csloan7597">LinkedIn</a></li>
+        <li><a href="https://twitter.com/csloan7597">Twitter</a></li>
+        <li><a href="mailto:c.sloan@hotmail.co.uk?Subject=I%20Want%20To%20Hire%20You!" target="_top">Email</a></li>
+      </ul>
     </div>
   </div>
