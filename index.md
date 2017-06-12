@@ -51,32 +51,51 @@ permalink: /
         <tbody>
           <tr>
             <td>Backend Development</td>
-            <td>5 years experience with Java, PHP, Python, Swift, Go, Node.js & JavaScript building websites and platforms at scale. Experience with Web Development, Microservices, SOA, MySQL, Git.</td>
+            <td><i>5 years experience with Java, PHP, Python, Swift, Go, Node.js & JavaScript building websites and platforms at scale. Experience with Web Development, Microservices, SOA, MySQL, Git.</i></td>
           </tr>
           <tr>
             <td>Sysadmin / DevOps</td>
-            <td>Experience with AWS, Linux, Bash, Perl, writing Data Centre automation for UNIX systems & general scripting for various tasks. Hands on use of Docker, Jenkins & various orchestration tools.</td>
+            <td><i>Experience with AWS, Linux, Bash, Perl, writing Data Centre automation for UNIX systems & general scripting for various tasks. Hands on use of Docker, Jenkins & various orchestration tools.</i></td>
           </tr>
           <tr>
             <td>Distributed Systems</td>
-            <td>Experience with Kafka, Redis, Cassandra, MongoDB & other NoSQL solutions. Good academic understanding.</td>
+            <td><i>Experience with Kafka, Redis, Cassandra, MongoDB & other NoSQL solutions. Good academic understanding.</i></td>
           </tr>
           <tr>
             <td>Big Data</td>
-            <td>Research project at <a href="">BT</a> involved use of MapReduce, Hadoop, Giraph, Hive, HDFS. Good academic understanding.</td>
+            <td><i>Research project at <a href="">BT</a> involved use of MapReduce, Hadoop, Giraph, Hive, HDFS. Good academic understanding.</i></td>
           </tr>
         </tbody>
       </table>
 
       <h3> Experience </h3>
 
-      <h4> iCloud Software Engineer @ <a href="">Apple</a> <small>- 10/10/10 - Present</small></h4>
+      <h4> iCloud Software Engineer @ <a href="">Apple</a> <small>:- February 2016 - Present</small></h4>
+      <p>
+      Currently work as part of the iCloud team in London developing a platform as a service tool, including design & development of client SDK & distributed platform infrastructure.
+      Support of multiple internal clients, involving consultancy, bug investigation & resolution & implementing feature requests.
+      </p>  
 
-      <h4> Software Development Engineer II @ <a href="">Amazon</a> <small>- 10/10/10 - Present</small></h4>
+      <pre><i class="devicon-atom-original colored">Atom</i> <i class="devicon-docker-plain colored">Docker</i> <i class="devicon-git-plain colored">Git</i> <i class="devicon-go-plain colored">Golang</i> <i class="devicon-gradle-plain">Gradle</i> <i class="devicon-intellij-plain colored">IDEA</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-javascript-plain colored">JavaScript</i> <i class="devicon-javascript-plain colored">Linux</i> <i class="devicon-apple-original colored">MacOS</i> <i class="devicon-python-plain colored">Python</i> <i class="devicon-react-original colored">React</i> <i class="devicon-swift-plain colored">Swift</i></pre>
 
-      <h4> Software Development Intern (Research) @ <a href="">BT Global Engineering Services</a> <small>- 10/10/10 - Present</small></h4>
+      <h4> Software Development Engineer II @ <a href="">Amazon</a> <small>:- June 2014 - February 2016 </small></h4>
+      <p>
+      Developed a new technology platform for an Amazon-owned international e-commerce site, <a href="">Book Depository</a>. Greenfield development of a Service Oriented Architecture deployed on AWS, backed by a multiple data storage solutions. Maintenance of a large PHP codebase, including breaking out existing features to new services with no downtime. Developed a prototypal mobile app and went on to discuss my work at the then-internal <a href="">WebDevCon</a>.
+      </p>
 
-      <h4> Software Developer @ <a href="">Oracle</a> <small>- 10/10/10 - Present</small></h4>
+      <pre><i class="devicon-amazonwebservices-original colored">AWS</i> <i class="devicon-apache-plain colored">Cordova</i> <i class="devicon-bootstrap-plain colored">Bootstrap</i> <i class="devicon-git-plain colored">Git</i> <i class="devicon-intellij-plain colored">IDEA</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-javascript-plain colored">JavaScript</i> <i class="devicon-linux-plain colored">Linux</i> <i class="devicon-mysql-plain colored">MySQL</i> <i class="devicon-nodejs-plain colored">Node.js</i> <i class="devicon-php-plain colored">PHP</i> <i class="devicon-phpstorm-plain colored">PHPStorm</i> <i class="devicon-python-plain colored">Python</i> <i class="devicon-redis-plain colored">Redis</i> <i class="devicon-tomcat-line colored">Tomcat</i> <i class="devicon-zend-plain colored">Zend</i></pre>
+
+      <h4> Software Development Intern (Research) @ <a href="">BT Global Engineering Services</a> <small>:- June 2013 - September 2013</small></h4>
+      <p>
+      Executed a 3 month research project in a two-man team related to large scale big data graph processing. Work involved research into Distributed Systems, Graph Theory & Graph Visualisation. Developed a graph visualisation tool for graph data analysis as a prototype, then designed a number of algorithms for augmenting metadata based on interaction with the data. Scaled up by designing these algorithms for use with Apache Hadoop, Hive, HBase & Giraph. Developed jobs for processing large graph datasets as well as custom data import/exporting. Performed a technical presentation on completion of the project and was offered a full time job at the end of the internship.  
+      </p>
+      <pre> <i class="devicon-ssh-plain colored">Bash/SSH</i> <i class="devicon-apache-plain colored">Giraph</i> <i class="devicon-git-plain colored">Git</i> <i class="devicon-apache-plain colored">Hadoop</i> <i class="devicon-apache-plain colored">Hive</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-python-plain colored">Python</i> <i class="devicon-linux-plain colored">Linux</i></pre>
+
+      <h4> Software Developer @ <a href="">Oracle</a> <small>:- July 2012 - May 2013</small></h4>
+      <p>
+      Developed complex automation using the Oracle VM Web Services APIs for Virtual Machine management in the Data Centre. Automated deployment & management of large Engineered Systems, taking the lead in development of a qualification suite for many data centre configurations. Created tools for *nix based systems for machine administration & automation through scripting. Performed technical presentations on various topics for transfer of information.
+      </p>
+      <pre><i class="devicon-ssh-plain colored">Bash/SSH</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-linux-plain colored">Linux</i> <i class="devicon-oracle-original colored">OVM</i> <i class="devicon-python-plain colored">Python</i></pre>
 
       <h3> Education </h3>
 
