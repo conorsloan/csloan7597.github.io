@@ -9,30 +9,30 @@ permalink: /
   <div class="row">
     <div class="column">
       <h2>Conor Sloan ~ Software Developer</h2>
-      <p>Experienced multi-discipline Software Engineer @ <a href="">Apple</a>. Previously <a href="">Amazon</a>, <a href="">BT</a>, <a href="">Oracle</a>.</p><hr/>
+      <p>Experienced multi-discipline Software Engineer @ <a href="https://www.apple.com/">Apple</a>. Previously <a href="https://www.amazon.co.uk/">Amazon</a>, <a href="http://home.bt.com/">BT</a>, <a href="https://www.oracle.com/index.html">Oracle</a>.</p><hr/>
 
       <h3>Highlights</h3>
       <ul>
         <li>Strong academic background
           <i><ul>
-            <li>1st in Computer Science from <a href="">University of Leeds</a>, AAA at A Level from <a href="">Calday Grange Grammar School</a></li>
-            <li>Cook Prize Winner for "Best performance in the final year in the School of Computing"</li>
-            <li>Computing A Level award winner (Highest overall score)</li>
+            <li>1st in Computer Science from <a href="https://www.leeds.ac.uk/">University of Leeds</a>, AAA at A Level from <a href="http://www.caldaygrangegrammarschool.co.uk/page/default.asp?title=Home&pid=1">Calday Grange Grammar School</a></li>
+            <li>Winner of the Cook Prize for "Best performance in the final year in the School of Computing"</li>
+            <li>Winner of the Computing A Level Award for highest overall score</li>
           </ul></i>
         </li>
         <li>
           Strong professional record
           <i><ul>
-            <li>Promoted from SDE I to SDE II within 18 months at <a href="">Amazon</a></li>
-            <li>'Outstanding' (highest possible) performance review in my first year at <a href="">Amazon</a></li>
-            <li>Joint highest performance rating of 10 interns at <a href="">BT Research</a> that year</li>
+            <li>Promoted from SDE I to SDE II within 18 months at <a href="https://www.amazon.co.uk/">Amazon</a></li>
+            <li>'Outstanding' (highest possible) performance review in my first year at <a href="https://www.amazon.co.uk/">Amazon</a></li>
+            <li>Joint highest performance rating of 10 interns at <a href="http://www.btplc.com/innovation/">BT Research</a> that year</li>
           </ul></i>
         </li>
         <li>Strong interpersonal skills
         <i><ul>
-          <li>Presented at <a href="">WebDevCon</a>, a then-internal conference at <a href="">Amazon</a></li>
-          <li>Founding member & Treasurer of the Computing Society at <a href="">University of Leeds</a></li>
-          <li>Background in Drama from my time at <a href="">Calday Grange Grammar School</a>, Gifted & Talented register for Drama</li>
+          <li>Presented at <a href="http://webdevcon.com/">WebDevCon</a>, a then-internal conference at <a href="https://www.amazon.co.uk/">Amazon</a></li>
+          <li>Founding member & Treasurer of the Computing Society at <a href="https://www.leeds.ac.uk/">University of Leeds</a></li>
+          <li>Background in Drama from my time at <a href="http://www.caldaygrangegrammarschool.co.uk/page/default.asp?title=Home&pid=1">Calday Grange Grammar School</a>, Gifted & Talented register for Drama</li>
         </ul></i>
         </li>
       </ul>
@@ -70,37 +70,37 @@ permalink: /
 
       <h3> Experience </h3>
 
-      <h4> iCloud Software Engineer @ <a href="">Apple</a> <small>:- February 2016 - Present</small></h4>
-      <p>
+      <h4> iCloud Software Engineer @ <a href="https://www.apple.com/">Apple</a> <small>:- February 2016 - Present</small></h4>
+      <p><i>
       Currently work as part of the iCloud team in London developing a platform as a service tool, including design & development of client SDK & distributed platform infrastructure.
       Support of multiple internal clients, involving consultancy, bug investigation & resolution & implementing feature requests.
-      </p>  
+      </i></p>  
 
       <pre><i class="devicon-atom-original colored">Atom</i> <i class="devicon-docker-plain colored">Docker</i> <i class="devicon-git-plain colored">Git</i> <i class="devicon-go-plain colored">Golang</i> <i class="devicon-gradle-plain">Gradle</i> <i class="devicon-intellij-plain colored">IDEA</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-javascript-plain colored">JavaScript</i> <i class="devicon-javascript-plain colored">Linux</i> <i class="devicon-apple-original colored">MacOS</i> <i class="devicon-python-plain colored">Python</i> <i class="devicon-react-original colored">React</i> <i class="devicon-swift-plain colored">Swift</i></pre>
 
-      <h4> Software Development Engineer II @ <a href="">Amazon</a> <small>:- June 2014 - February 2016 </small></h4>
-      <p>
-      Developed a new technology platform for an Amazon-owned international e-commerce site, <a href="">Book Depository</a>. Greenfield development of a Service Oriented Architecture deployed on AWS, backed by a multiple data storage solutions. Maintenance of a large PHP codebase, including breaking out existing features to new services with no downtime. Developed a prototypal mobile app and went on to discuss my work at the then-internal <a href="">WebDevCon</a>.
-      </p>
+      <h4> Software Development Engineer II @ <a href="https://www.amazon.co.uk/">Amazon</a> <small>:- June 2014 - February 2016 </small></h4>
+      <p><i>
+      Developed a new technology platform for an Amazon-owned international e-commerce site, <a href="">Book Depository</a>. Greenfield development of a Service Oriented Architecture deployed on AWS, backed by a multiple data storage solutions. Maintenance of a large PHP codebase, including breaking out existing features to new services with no downtime. Developed a prototypal mobile app and went on to discuss my work at the then-internal <a href="http://webdevcon.com/">WebDevCon</a>.
+      </i></p>
 
       <pre><i class="devicon-amazonwebservices-original colored">AWS</i> <i class="devicon-apache-plain colored">Cordova</i> <i class="devicon-bootstrap-plain colored">Bootstrap</i> <i class="devicon-git-plain colored">Git</i> <i class="devicon-intellij-plain colored">IDEA</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-javascript-plain colored">JavaScript</i> <i class="devicon-linux-plain colored">Linux</i> <i class="devicon-mysql-plain colored">MySQL</i> <i class="devicon-nodejs-plain colored">Node.js</i> <i class="devicon-php-plain colored">PHP</i> <i class="devicon-phpstorm-plain colored">PHPStorm</i> <i class="devicon-python-plain colored">Python</i> <i class="devicon-redis-plain colored">Redis</i> <i class="devicon-tomcat-line colored">Tomcat</i> <i class="devicon-zend-plain colored">Zend</i></pre>
 
-      <h4> Software Development Intern (Research) @ <a href="">BT Global Engineering Services</a> <small>:- June 2013 - September 2013</small></h4>
-      <p>
+      <h4> Software Development Intern (Research) @ <a href="http://www.btplc.com/innovation/">BT Global Engineering Services</a> <small>:- June 2013 - September 2013</small></h4>
+      <p><i>
       Executed a 3 month research project in a two-man team related to large scale big data graph processing. Work involved research into Distributed Systems, Graph Theory & Graph Visualisation. Developed a graph visualisation tool for graph data analysis as a prototype, then designed a number of algorithms for augmenting metadata based on interaction with the data. Scaled up by designing these algorithms for use with Apache Hadoop, Hive, HBase & Giraph. Developed jobs for processing large graph datasets as well as custom data import/exporting. Performed a technical presentation on completion of the project and was offered a full time job at the end of the internship.  
-      </p>
+      </i></p>
       <pre> <i class="devicon-ssh-plain colored">Bash/SSH</i> <i class="devicon-apache-plain colored">Giraph</i> <i class="devicon-git-plain colored">Git</i> <i class="devicon-apache-plain colored">Hadoop</i> <i class="devicon-apache-plain colored">Hive</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-python-plain colored">Python</i> <i class="devicon-linux-plain colored">Linux</i></pre>
 
-      <h4> Software Developer @ <a href="">Oracle</a> <small>:- July 2012 - May 2013</small></h4>
-      <p>
+      <h4> Software Developer @ <a href="https://www.oracle.com/index.html">Oracle</a> <small>:- July 2012 - May 2013</small></h4>
+      <p><i>
       Developed complex automation using the Oracle VM Web Services APIs for Virtual Machine management in the Data Centre. Automated deployment & management of large Engineered Systems, taking the lead in development of a qualification suite for many data centre configurations. Created tools for *nix based systems for machine administration & automation through scripting. Performed technical presentations on various topics for transfer of information.
-      </p>
+      </i></p>
       <pre><i class="devicon-ssh-plain colored">Bash/SSH</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-linux-plain colored">Linux</i> <i class="devicon-oracle-original colored">OVM</i> <i class="devicon-python-plain colored">Python</i></pre>
 
       <h3> Education </h3>
 
-      <h4> BSc Computer Science @ <a href="">University of Leeds</a></h4>
-      <p>Attained an overall 1st, winning the Cook Prize for best performance in the final year.</p>
+      <h4> BSc Computer Science @ <a href="https://www.leeds.ac.uk/">University of Leeds</a></h4>
+      <p><i>Attained an overall 1st, winning the Cook Prize for best performance in the final year.</i></p>
       <table class="u-full-width">
                     <tbody><tr>
                         <th>
@@ -264,9 +264,9 @@ permalink: /
                     </tr>
                 </tbody></table>
 
-      <h4> A Levels @ <a href="">Calday Grange Grammar School</a></h4>
+      <h4> A Levels @ <a href="http://www.caldaygrangegrammarschool.co.uk/page/default.asp?title=Home&pid=1">Calday Grange Grammar School</a></h4>
 
-      <p>Attained 4 A Levels, and 11 GCSEs A-C. Won the Computing Award for highest grade at A Level.</p>
+      <p><i>Attained 4 A Levels, and 11 GCSEs A-C. Won the Computing Award for highest grade at A Level.</i></p>
       <table class="u-full-width">
         <tbody><tr>
             <th>
@@ -325,8 +325,8 @@ permalink: /
 
       <ul>
         <li><a href="https://drive.google.com/file/d/0B2HMk1AmTvyAMEJTbjNXVUNTOFU/view?usp=sharing">Curriculum Vitae</a> </li>
-        <li><a href="https://vlebb.leeds.ac.uk/bbcswebdav/orgs/SCH_Computing/FYProj/reports/1314/Sloan.pdf">An Evaluation of OpenStack</a> - my final year paper, awarded a 1st. </li>
-        <li><a href="https://drive.google.com/file/d/0B2HMk1AmTvyATFFicUVXbUtzZ3M/view?usp=sharing">Personal Recommendation</a> - from a Principal Engineer I worked with at Oracle. </li>
+        <li><a href="https://vlebb.leeds.ac.uk/bbcswebdav/orgs/SCH_Computing/FYProj/reports/1314/Sloan.pdf">An Evaluation of OpenStack</a> - <i>my final year paper, awarded a 1st. </i></li>
+        <li><a href="https://drive.google.com/file/d/0B2HMk1AmTvyATFFicUVXbUtzZ3M/view?usp=sharing">Personal Recommendation</a> - <i>from a Principal Engineer I worked with at Oracle.</i> </li>
       </ul>
 
       <h4> Contact </h4>
