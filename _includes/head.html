@@ -9,4 +9,26 @@
   <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+  // Beautifully ugly little native js show-hide for the tables :) 
+  function toggleViewTable(button, tableClass, showingLabel, hidingLabel) {
+  	var currentLabel = button.innerHTML
+      var table = document.getElementsByClassName(tableClass)[0]
+      console.log(currentLabel)
+      switch (currentLabel) {
+      	case hidingLabel:
+          	console.log("Showing table " + tableClass);
+              table.style.cssText = ""
+              button.innerHTML = showingLabel;
+              break;
+          case showingLabel:
+          	console.log("Hiding table " + tableClass);
+              table.style.cssText = "display: none;"
+              button.innerHTML = hidingLabel;
+              break;
+  	}
+
+  }
+</script>
 </head>

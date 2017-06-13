@@ -101,7 +101,8 @@ permalink: /
 
       <h4> BSc Computer Science @ <a href="https://www.leeds.ac.uk/">University of Leeds</a></h4>
       <p><i>Attained an overall 1st, winning the Cook Prize for best performance in the final year.</i></p>
-      <table class="u-full-width">
+      <button class="uni-table-button" onclick="toggleViewTable(this, 'uni-table', 'Hide Module Grades', 'Show Module Grades')">Show Module Grades</button>
+      <table class="u-full-width uni-table" style="display: none;">
                     <tbody><tr>
                         <th>
                             Module
@@ -267,7 +268,8 @@ permalink: /
       <h4> A Levels @ <a href="http://www.caldaygrangegrammarschool.co.uk/page/default.asp?title=Home&pid=1">Calday Grange Grammar School</a></h4>
 
       <p><i>Attained 4 A Levels, and 11 GCSEs A-C. Won the Computing Award for highest grade at A Level.</i></p>
-      <table class="u-full-width">
+      <button class="alevel-table-button" onclick="toggleViewTable(this, 'alevel-table', 'Hide A Level Results', 'Show A Level Results')">Show A Level Results</button>
+      <table class="u-full-width alevel-table" style="display: none;">
         <tbody><tr>
             <th>
                 Subject
