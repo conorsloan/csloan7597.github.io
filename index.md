@@ -76,7 +76,7 @@ permalink: /
       Support of multiple internal clients, involving consultancy, bug investigation & resolution & implementing feature requests.
       </i></p>  
 
-      <pre><i class="devicon-atom-original colored">Atom</i> <i class="devicon-docker-plain colored">Docker</i> <i class="devicon-git-plain colored">Git</i> <i class="devicon-go-plain colored">Golang</i> <i class="devicon-gradle-plain">Gradle</i> <i class="devicon-intellij-plain colored">IDEA</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-javascript-plain colored">JavaScript</i> <i class="devicon-javascript-plain colored">Linux</i> <i class="devicon-apple-original colored">MacOS</i> <i class="devicon-python-plain colored">Python</i> <i class="devicon-react-original colored">React</i> <i class="devicon-swift-plain colored">Swift</i></pre>
+      <pre><i class="devicon-atom-original colored">Atom</i> <i class="devicon-docker-plain colored">Docker</i> <i class="devicon-git-plain colored">Git</i> <i class="devicon-go-plain colored">Golang</i> <i class="devicon-gradle-plain">Gradle</i> <i class="devicon-intellij-plain colored">IDEA</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-javascript-plain colored">JavaScript</i> <i class="devicon-linux-plain colored">Linux</i> <i class="devicon-apple-original colored">MacOS</i> <i class="devicon-python-plain colored">Python</i> <i class="devicon-react-original colored">React</i> <i class="devicon-swift-plain colored">Swift</i></pre>
 
       <h4> Software Development Engineer II @ <a href="https://www.amazon.co.uk/">Amazon</a> <small>:- June 2014 - February 2016 </small></h4>
       <p><i>
