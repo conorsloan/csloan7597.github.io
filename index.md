@@ -39,7 +39,7 @@ permalink: /
 
 
 
-      <h3> Key Skills </h3>
+      <h3>Skills</h3>
 
       <table class="u-full-width">
         <thead>
@@ -68,7 +68,7 @@ permalink: /
         </tbody>
       </table>
 
-      <h3> Experience </h3>
+      <h3>Experience</h3>
 
       <h4> iCloud Software Engineer @ <a href="https://www.apple.com/">Apple</a> <small>:- February 2016 - Present</small></h4>
       <p><i>
@@ -97,7 +97,7 @@ permalink: /
       </i></p>
       <pre><i class="devicon-ssh-plain colored">Bash/SSH</i> <i class="devicon-java-plain colored">Java</i> <i class="devicon-linux-plain colored">Linux</i> <i class="devicon-oracle-original colored">OVM</i> <i class="devicon-python-plain colored">Python</i></pre>
 
-      <h3> Education </h3>
+      <h3>Education</h3>
 
       <h4> BSc Computer Science @ <a href="https://www.leeds.ac.uk/">University of Leeds</a></h4>
       <p><i>Attained an overall 1st, winning the Cook Prize for best performance in the final year.</i></p>
