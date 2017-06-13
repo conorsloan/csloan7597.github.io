@@ -51,7 +51,7 @@ permalink: /
         <tbody>
           <tr>
             <td>Backend Development</td>
-            <td><i>5 years experience with Java, PHP, Python, Swift, Go, Node.js & JavaScript building websites and platforms at scale. Experience with Web Development, Microservices, SOA, MySQL, Git.</i></td>
+            <td><i>5 years experience with Java, PHP, Python, Swift, Go, Node.js & JavaScript building websites and platforms at scale. Experience with Web Development, Service Development, Database design & development and software development best practices.</i></td>
           </tr>
           <tr>
             <td>Sysadmin / DevOps</td>
