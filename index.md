@@ -25,7 +25,7 @@ permalink: /
           <i><ul>
             <li>Promoted from SDE I to SDE II within 18 months at <a href="https://www.amazon.co.uk/">Amazon</a></li>
             <li>'Outstanding' (highest possible) performance review in my first year at <a href="https://www.amazon.co.uk/">Amazon</a></li>
-            <li>Joint highest performance rating of 10 interns at <a href="http://www.btplc.com/innovation/">BT Research</a> that year</li>
+            <li>Joint highest performance rating of 10 interns at <a href="http://www.btplc.com/innovation/">BT Research</a></li>
           </ul></i>
         </li>
         <li>Strong interpersonal skills
