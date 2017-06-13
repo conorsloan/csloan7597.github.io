@@ -59,7 +59,7 @@ permalink: /
           </tr>
           <tr>
             <td>Distributed Systems</td>
-            <td><i>Experience with Kafka, Redis, Cassandra, MongoDB & other NoSQL solutions. Good academic understanding.</i></td>
+            <td><i>Experience with Kafka, Redis, MongoDB & other NoSQL solutions. Hands on experience building out Service-Oriented and Microservices architectures. Good academic understanding.</i></td>
           </tr>
           <tr>
             <td>Big Data</td>
