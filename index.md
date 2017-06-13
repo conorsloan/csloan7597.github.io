@@ -326,7 +326,7 @@ permalink: /
       <h4> Links </h4>
 
       <ul>
-        <li><a href="https://drive.google.com/file/d/0B2HMk1AmTvyAMEJTbjNXVUNTOFU/view?usp=sharing">Curriculum Vitae</a> </li>
+        <li><a href="https://drive.google.com/file/d/0B2HMk1AmTvyAWmJkT3ltZ2xaVWc/view?usp=sharing">Curriculum Vitae</a> </li>
         <li><a href="https://vlebb.leeds.ac.uk/bbcswebdav/orgs/SCH_Computing/FYProj/reports/1314/Sloan.pdf">An Evaluation of OpenStack</a> - <i>my final year paper, awarded a 1st. </i></li>
         <li><a href="https://drive.google.com/file/d/0B2HMk1AmTvyATFFicUVXbUtzZ3M/view?usp=sharing">Personal Recommendation</a> - <i>from a Principal Engineer I worked with at Oracle.</i> </li>
       </ul>
@@ -336,7 +336,7 @@ permalink: /
         <li><a href="https://github.com/csloan7597">GitHub</a></li>
         <li><a href="http://uk.linkedin.com/in/csloan7597">LinkedIn</a></li>
         <li><a href="https://twitter.com/csloan7597">Twitter</a></li>
-        <li><a href="mailto:c.sloan@hotmail.co.uk?Subject=I%20Want%20To%20Hire%20You!" target="_top">Email</a></li>
+        <li><a href="mailto:work@conorsloan.uk?Subject=I%20Want%20To%20Hire%20You!" target="_top">Email</a></li>
       </ul>
     </div>
   </div>
