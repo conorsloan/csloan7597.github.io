@@ -8,7 +8,7 @@ permalink: /
 <!-- columns should be the immediate child of a .row -->
   <div class="row">
     <div class="column">
-      <h2>Conor Sloan ~ Software Developer</h2>
+      <h2>Conor Sloan | Software Developer</h2>
       <p>Experienced multi-discipline Software Engineer @ <a href="https://www.apple.com/">Apple</a>. Previously <a href="https://www.amazon.co.uk/">Amazon</a>, <a href="http://home.bt.com/">BT</a>, <a href="https://www.oracle.com/index.html">Oracle</a>.</p><hr/>
 
       <h3>Highlights</h3>
