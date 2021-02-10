@@ -43,3 +43,13 @@ body {
   display: none;
   overflow: hidden;
 }
+
+.social-btns {
+  padding-bottom: 20px; 
+}
+
+.social-btns a
+{
+     color: #888;
+     text-decoration: none;
+}
