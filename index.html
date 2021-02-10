@@ -1,5 +1,7 @@
 <html>
 <head>
+  <title> Conor Sloan | Software Engineer </title>
+  
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
   <title>{{ site.title }}</title>
   <link rel="stylesheet" href="/css/normalize.css">
@@ -12,27 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="dYy2DrvCMn1lywto9XXtV7JU8prxJKQbYpVCd30Khhc" />
   
-  <script>
-  // Beautifully ugly little native js show-hide for the tables :)
-  function toggleViewTable(button, tableClass, showingLabel, hidingLabel) {
-  	var currentLabel = button.innerHTML
-      var table = document.getElementsByClassName(tableClass)[0]
-      console.log(currentLabel)
-      switch (currentLabel) {
-      	case hidingLabel:
-          	console.log("Showing table " + tableClass);
-              table.style.cssText = ""
-              button.innerHTML = showingLabel;
-              break;
-          case showingLabel:
-          	console.log("Hiding table " + tableClass);
-              table.style.cssText = "display: none;"
-              button.innerHTML = hidingLabel;
-              break;
-  	}
-
-  }
-</script>
+  <script src="js/site.js"></script>
+  
 </head>
 <body>
 
@@ -40,9 +23,37 @@
 <!-- columns should be the immediate child of a .row -->
   <div class="container">
     <div class="column">
-      <h2>Conor Sloan ~ Software Developer</h2>
-      <p>Experienced multi-discipline Software Engineer @ <a href="https://www.apple.com/">Apple</a>. Previously <a href="https://www.amazon.co.uk/">Amazon</a>, <a href="http://home.bt.com/">BT</a>, <a href="https://www.oracle.com/index.html">Oracle</a>.</p><hr/>
+      <h2>Conor Sloan - Software Engineer</h2>
+      <p>Experienced multi-discipline Software Engineer @ <a href="https://www.apple.com/">Apple</a>. Previously <a href="https://www.amazon.co.uk/">Amazon</a>, <a href="http://home.bt.com/">BT</a>, <a href="https://www.oracle.com/index.html">Oracle</a>.</p>
+      <hr/>
 
+      <div class="pdf-container">
+        <embed src="files/2021 CV.pdf" width="100%" height = "40%" type="application/pdf">
+      </div>
+        
+        
+        
+      <div class="accordion-container">
+        <button class="accordion" onclick="toggleAccordion(this)">Career Highlights</button>
+        <div class="panel">
+          <p>I am currently working as an ICT4 (Senior) Software Engineer for iCloud.</p>
+
+        </div>
+
+        <button class="accordion" onclick="toggleAccordion(this)">Education</button>
+        <div class="panel">
+          <p>I did school and stuff.</p>
+        </div>
+
+        <button class="accordion" onclick="toggleAccordion(this)">Personal Interests</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+      </div>
+        
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <h3>Highlights</h3>
       <ul>
         <li>Strong academic background
