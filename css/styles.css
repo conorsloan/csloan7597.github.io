@@ -54,3 +54,15 @@ body {
      color: #888;
      text-decoration: none;
 }
+
+.info {
+  background-color: #e7f3fe;
+  border-left: 6px solid lightblue;
+  margin-bottom: 35px;
+  padding: 4px 12px;
+}
+
+.info p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
