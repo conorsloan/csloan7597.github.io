@@ -1,329 +1,364 @@
 <html>
-<head>
-  <title> Conor Sloan | Software Engineer </title>
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="manifest" href="/img/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
 
-  <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/skeleton.css">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/dependencies/font-awesome/css/all.css">
+  <head>
+    <title> Conor Sloan | Software Engineer </title>
 
-  <!-- <link rel="stylesheet" href="{{ "/dependencies/devicon-master/devicon.min.css" | prepend: site.baseurl }}"> -->
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="dYy2DrvCMn1lywto9XXtV7JU8prxJKQbYpVCd30Khhc" />
-  
-  <script src="js/site.js"></script>
-  
-</head>
-<body>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/dependencies/font-awesome/css/all.css">
 
-<!-- columns should be the immediate child of a .row -->
-  <div class="container">
-    <div class="column">
-      <h2>Conor Sloan - Software Engineer</h2> 
-      <p>
-        Experienced London-based multi-discipline Software Engineer @ <a href="https://www.github.com">GitHub</a>. Previously <a href="https://www.apple.com/">Apple</a>, <a href="https://www.amazon.co.uk/">Amazon</a>, <a href="http://home.bt.com/">BT</a>, <a href="https://www.oracle.com/index.html">Oracle</a>.
-      </p>
+    <!-- <link rel="stylesheet" href="{{ "/dependencies/devicon-master/devicon.min.css" | prepend: site.baseurl }}"> -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-      <hr/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="dYy2DrvCMn1lywto9XXtV7JU8prxJKQbYpVCd30Khhc" />
 
-      <div class="info">
-        <p>👋 Hi! I am currently <b>not</b> looking for new full-time opportunities, but feel free to get in touch so we can reconnect in the future!</p>
-      </div>
+    <script src="js/site.js"></script>
 
-      <div class="accordion-container">
-        <button class="accordion" onclick="toggleAccordion(this)">📃 Curriculum Vitae</button>
-        <div class="panel">
+    <script src="https://js.upload.io/upload-js/v1"></script>
+    <script>
+      const upload = new Upload({
+
+        // This is your API key:
+        apiKey: "public_12a1xmqBX8WTvEpHUqavXTzRbDvL"
+
+      })
+      const uploadFile = upload.createFileInputHandler({
+        onBegin: ({
+          cancel
+        }) => {
+          document.getElementsByClassName("uploading")[0].classList.remove("hidden")
+        },
+
+        onUploaded: ({
+          fileUrl,
+          fileId
+        }) => {
+          document.getElementsByClassName("uploading")[0].classList.add("hidden")
+          alert(`File uploaded! ${fileUrl}`);
+        }
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="column">
+        <h2>Conor Sloan - Software Engineer</h2>
+        <p>
+          Experienced London-based multi-discipline Software Engineer @ <a href="https://www.github.com">GitHub</a>. Previously <a href="https://www.apple.com/">Apple</a>, <a href="https://www.amazon.co.uk/">Amazon</a>, <a href="http://home.bt.com/">BT</a>, <a href="https://www.oracle.com/index.html">Oracle</a>.
+        </p>
+
+        <hr />
+
+        <div class="info">
+          <p>👋 Hi! I am currently <b>not</b> looking for new full-time opportunities, but feel free to get in touch so we can reconnect in the future!</p>
+        </div>
+
+        <div class="accordion-container">
+          <button class="accordion" onclick="toggleAccordion(this)">📃 Curriculum Vitae</button>
+          <div class="panel">
             <div class="pdf-container">
-                <iframe width="100%" height="60%" src="dependencies/pdfjs/web/viewer.html?file=../../../files/2022-CV.pdf"></iframe>
-              </div>
-        </div>
+              <iframe width="100%" height="60%" src="dependencies/pdfjs/web/viewer.html?file=../../../files/2022-CV.pdf"></iframe>
+            </div>
+          </div>
 
-        <button class="accordion" onclick="toggleAccordion(this)">👨🏻‍💻 How I Work</button>
-        <div class="panel">
-          I tend towards the following habits; they provide an outline of how I like to work. <br/><br/> 
+          <button class="accordion" onclick="toggleAccordion(this)">👨🏻‍💻 How I Work</button>
+          <div class="panel">
+            I tend towards the following habits; they provide an outline of how I like to work. <br /><br />
 
-          <ul>
-            <li>I ask <b>lots of questions</b>, though I often prefer consulting good documentation.</li>
-            <li>I love to <b>design systems and architectures</b>, though I like to stay in the code.</li>
-            <li>So far, I have chosen <b>adaptability over specialisation</b>. I learn fast, but I'm not a world-leading expert in one area.</li> 
-            <li>I believe strongly in the '<b>softer skills</b>'. I like to present, discuss ideas, and build relationships.</li>
-            <li>I value <b>personal connections</b>. It matters to me that my colleagues are happy, and I will work in aid of that goal.</li>
-            <li>The trait I value most highly is <b>pragmatism</b>. I am rarely stuck in my ways, and I hope to see that in others.</li>
-          </ul>
-
-          For a broader picture of my personality, the description of the <a href="https://www.16personalities.com/enfp-personality">ENFP personality type</a> doesn't do a bad job!<br/><br/>
-        </div>
-
-        <button class="accordion" onclick="toggleAccordion(this)">✨ Career Highlights</button>
-        <div class="panel">
-          <ul> 
-            <li>Achieved promotion from ICT3 to ICT4 at Apple, and was also made Tech Lead</li>
-            <li>Achieved promotion from SDE1 to SDE2 at Amazon, having achieved an 'outstanding' review in the first year</li>
-            <li>Spoke at Amazon's WebDevCon, discussing mobile hybrid apps built using Apache Cordova</li>
-            <li>Ranked joint-highest of the 10 interns at BT GES Summer Research Internship</li>
-            <li>Received a <a href="https://drive.google.com/file/d/0B2HMk1AmTvyATFFicUVXbUtzZ3M/view?usp=sharing">Personal Recommendation</a> from a Principal Engineer I worked with at Oracle.</li>
-          </ul>
-        </div>
-
-        <button class="accordion" onclick="toggleAccordion(this)">📚 Education</button>
-        <div class="panel">
-          <ul>
-            <li>1st in BSc Computer Science from <a href="https://www.leeds.ac.uk/">University of Leeds</a></li>
             <ul>
-              <li>Winner of the Cook Prize for "Best performance in the final year in the School of Computing"</li>
-              <li> My final year paper, <a href="https://vlebb.leeds.ac.uk/bbcswebdav/orgs/SCH_Computing/FYProj/reports/1314/Sloan.pdf">An Evaluation of OpenStack</a>, was awarded a 1st</li>
+              <li>I ask <b>lots of questions</b>, though I often prefer consulting good documentation.</li>
+              <li>I love to <b>design systems and architectures</b>, though I like to stay in the code.</li>
+              <li>So far, I have chosen <b>adaptability over specialisation</b>. I learn fast, but I'm not a world-leading expert in one area.</li>
+              <li>I believe strongly in the '<b>softer skills</b>'. I like to present, discuss ideas, and build relationships.</li>
+              <li>I value <b>personal connections</b>. It matters to me that my colleagues are happy, and I will work in aid of that goal.</li>
+              <li>The trait I value most highly is <b>pragmatism</b>. I am rarely stuck in my ways, and I hope to see that in others.</li>
             </ul>
-          </ul>
 
-             <button class="uni-table-button" onclick="toggleViewTable(this, 'uni-table', 'Hide Module Grades', 'Show Module Grades')">Show Module Grades</button>
-      <table class="u-full-width uni-table" style="display: none;">
-                    <tbody><tr>
-                        <th>
-                            Module
-                        </th>
-                        <th>
-                            Grade
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            Final Year Project - An Evaluation of OpenStack
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Parallel Scientific Computing
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Natural Language Processing
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Biological &amp; Bio-Inspired Computation
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Distributed Systems
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Knowledge Representation
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            User Adaptive Intelligent Systems
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Artificial Intelligence
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Interactive Database Systems
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Software Systems Engineering
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Theoretical Computer Science
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Practical Problem Solving
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Core Programming
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Modelling, Analysis &amp; Algorithm Design
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Maths for Computing
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Project Management
-                        </td>
-                        <td>
-                            1st
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Numerical Computation &amp; Visualisation
-                        </td>
-                        <td>
-                            2:1
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Professional Development
-                        </td>
-                        <td>
-                            2:1
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Computer Systems
-                        </td>
-                        <td>
-                            2:1
-                        </td>
-                    </tr>
-                </tbody></table>
+            For a broader picture of my personality, the description of the <a href="https://www.16personalities.com/enfp-personality">ENFP personality type</a> doesn't do a bad job!<br /><br />
+          </div>
 
-          <ul>
-            <li>AAA at A Level from <a href="http://www.caldaygrangegrammarschool.co.uk/page/default.asp?title=Home&pid=1">Calday Grange Grammar School</a></li>
+          <button class="accordion" onclick="toggleAccordion(this)">✨ Career Highlights</button>
+          <div class="panel">
             <ul>
-              <li>Winner of the Computing A Level Award for highest overall score</li>
+              <li>Achieved promotion from ICT3 to ICT4 at Apple, and was also made Tech Lead</li>
+              <li>Achieved promotion from SDE1 to SDE2 at Amazon, having achieved an 'outstanding' review in the first year</li>
+              <li>Spoke at Amazon's WebDevCon, discussing mobile hybrid apps built using Apache Cordova</li>
+              <li>Ranked joint-highest of the 10 interns at BT GES Summer Research Internship</li>
+              <li>Received a <a href="https://drive.google.com/file/d/0B2HMk1AmTvyATFFicUVXbUtzZ3M/view?usp=sharing">Personal Recommendation</a> from a Principal Engineer I worked with at Oracle.</li>
             </ul>
-          </ul>
+          </div>
 
-      <button class="alevel-table-button" onclick="toggleViewTable(this, 'alevel-table', 'Hide A Level Results', 'Show A Level Results')">Show A Level Results</button>
-      <table class="u-full-width alevel-table" style="display: none;">
-        <tbody><tr>
-            <th>
-                Subject
-            </th>
-            <th>
-                Grade
-            </th>
-        </tr>
-        <tr>
-            <td>
-                Computing
-            </td>
-            <td>
-                A
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Economics
-            </td>
-            <td>
-                A
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Law
-            </td>
-            <td>
-                A
-            </td>
-        </tr>
-        <tr>
-            <td>
-                General Studies
-            </td>
-            <td>
-                A*
-            </td>
-        </tr>
-      </tbody>
-    </table>
-    <br/><br/>
+          <button class="accordion" onclick="toggleAccordion(this)">📚 Education</button>
+          <div class="panel">
+            <ul>
+              <li>1st in BSc Computer Science from <a href="https://www.leeds.ac.uk/">University of Leeds</a></li>
+              <ul>
+                <li>Winner of the Cook Prize for "Best performance in the final year in the School of Computing"</li>
+                <li> My final year paper, <a href="https://vlebb.leeds.ac.uk/bbcswebdav/orgs/SCH_Computing/FYProj/reports/1314/Sloan.pdf">An Evaluation of OpenStack</a>, was awarded a 1st</li>
+              </ul>
+            </ul>
 
-        </div>
+            <button class="uni-table-button" onclick="toggleViewTable(this, 'uni-table', 'Hide Module Grades', 'Show Module Grades')">Show Module Grades</button>
+            <table class="u-full-width uni-table" style="display: none;">
+              <tbody>
+                <tr>
+                  <th>
+                    Module
+                  </th>
+                  <th>
+                    Grade
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    Final Year Project - An Evaluation of OpenStack
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Parallel Scientific Computing
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Natural Language Processing
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Biological &amp; Bio-Inspired Computation
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Distributed Systems
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Knowledge Representation
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    User Adaptive Intelligent Systems
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Artificial Intelligence
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Interactive Database Systems
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Software Systems Engineering
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Theoretical Computer Science
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Practical Problem Solving
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Core Programming
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Modelling, Analysis &amp; Algorithm Design
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Maths for Computing
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Project Management
+                  </td>
+                  <td>
+                    1st
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Numerical Computation &amp; Visualisation
+                  </td>
+                  <td>
+                    2:1
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Professional Development
+                  </td>
+                  <td>
+                    2:1
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Computer Systems
+                  </td>
+                  <td>
+                    2:1
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-        <button class="accordion" onclick="toggleAccordion(this)">🎸 Personal Interests</button>
-        <div class="panel">
+            <ul>
+              <li>AAA at A Level from <a href="http://www.caldaygrangegrammarschool.co.uk/page/default.asp?title=Home&pid=1">Calday Grange Grammar School</a></li>
+              <ul>
+                <li>Winner of the Computing A Level Award for highest overall score</li>
+              </ul>
+            </ul>
+
+            <button class="alevel-table-button" onclick="toggleViewTable(this, 'alevel-table', 'Hide A Level Results', 'Show A Level Results')">Show A Level Results</button>
+            <table class="u-full-width alevel-table" style="display: none;">
+              <tbody>
+                <tr>
+                  <th>
+                    Subject
+                  </th>
+                  <th>
+                    Grade
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    Computing
+                  </td>
+                  <td>
+                    A
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Economics
+                  </td>
+                  <td>
+                    A
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Law
+                  </td>
+                  <td>
+                    A
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    General Studies
+                  </td>
+                  <td>
+                    A*
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br /><br />
+
+          </div>
+
+          <button class="accordion" onclick="toggleAccordion(this)">🎸 Personal Interests</button>
+          <div class="panel">
             <p>🥊 <strong>Boxing</strong><br>I was a member of my local hometown club from age 11-18. I still keep up training, but just for fitness!</p>
             <p>⚽️ <strong>Football</strong><br>I am a boyhood fan of <a href="https://www.liverpoolfc.com">Liverpool FC</a>, as are many from the little merseyside peninsula I'm from. <br>I was also lucky enough to be at <a href="https://www.skysports.com/football/news/11945/11984568/liverpool-4-0-barcelona-stunning-reds-comeback-revisited">this game</a>! </p>
             <p>🎸 <strong>Guitar</strong><br>I learned to play during the pandemic by following Paul Davids' "<a href="https://learnpracticeplay.com/signup/">Learn, Practice, Play</a>" course.<br> I mostly play fingerstyle acoustic music.
+          </div>
+
         </div>
 
-      </div>
-        
+        <div class="social-btns">
+          <a class="btn twitter" href="https://twitter.com/csloan7597">
+            <i class="fab fa-twitter-square fa-2x"></i>
+          </a>
+          <a class="btn github" href="https://github.com/conorsloan">
+            <i class="fab fa-github-square fa-2x"></i>
+          </a>
+          <a class="btn linkedin" href="https://www.linkedin.com/in/csloan7597/">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+        </div>
 
-      <div class="social-btns">
-        <a class="btn twitter" href="https://twitter.com/csloan7597">
-          <i class="fab fa-twitter-square fa-2x"></i>
-        </a>
-        <a class="btn github" href="https://github.com/conorsloan">
-          <i class="fab fa-github-square fa-2x"></i>
-        </a>
-        <a class="btn linkedin" href="https://www.linkedin.com/in/csloan7597/">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
+        <div class="uploader">
+          <p>Upload a file here:</p>
+          <input type="file" onchange="uploadFile(event)" />
+          <p class="uploading hidden">Uploading.... please wait!</p>
+        </div>
       </div>
+  </body>
+  
