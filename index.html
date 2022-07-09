@@ -1,5 +1,4 @@
 <html>
-
   <head>
     <title> Conor Sloan | Software Engineer </title>
 
@@ -24,31 +23,6 @@
     <meta name="google-site-verification" content="dYy2DrvCMn1lywto9XXtV7JU8prxJKQbYpVCd30Khhc" />
 
     <script src="js/site.js"></script>
-
-    <script src="https://js.upload.io/upload-js/v1"></script>
-    <script>
-      const upload = new Upload({
-
-        // This is your API key:
-        apiKey: "public_12a1xmqBX8WTvEpHUqavXTzRbDvL"
-
-      })
-      const uploadFile = upload.createFileInputHandler({
-        onBegin: ({
-          cancel
-        }) => {
-          document.getElementsByClassName("uploading")[0].classList.remove("hidden")
-        },
-
-        onUploaded: ({
-          fileUrl,
-          fileId
-        }) => {
-          document.getElementsByClassName("uploading")[0].classList.add("hidden")
-          alert(`File uploaded! ${fileUrl}`);
-        }
-      });
-    </script>
 
   </head>
 
@@ -353,12 +327,4 @@
             <i class="fab fa-linkedin fa-2x"></i>
           </a>
         </div>
-
-        <div class="uploader">
-          <p>Upload a file here:</p>
-          <input type="file" onchange="uploadFile(event)" />
-          <p class="uploading hidden">Uploading.... please wait!</p>
-        </div>
-      </div>
   </body>
-  
