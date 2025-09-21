@@ -1,331 +1,636 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title> Conor Sloan | Software Engineer </title>
+    <title>Conor Sloan Consultancy Ltd | Enterprise Software Solutions</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/img/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="theme-color" content="#2563eb">
 
-    <title>{{ site.title }}</title>
+    <!-- Tailwind CSS via CDN for beautiful, modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Inter', 'system-ui', 'sans-serif'],
+              'display': ['Nunito', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              'primary': {
+                50: '#eff6ff',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                900: '#1e3a8a',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/skeleton.css">
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/dependencies/font-awesome/css/all.css">
-
-    <!-- <link rel="stylesheet" href="{{ "/dependencies/devicon-master/devicon.min.css" | prepend: site.baseurl }}"> -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom styles on top of Tailwind -->
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .service-card:hover {
+        transform: translateY(-4px);
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="dYy2DrvCMn1lywto9XXtV7JU8prxJKQbYpVCd30Khhc" />
+    <meta name="description" content="Conor Sloan Consultancy Ltd - Expert software consulting services specializing in backend systems, distributed architecture, DevOps, and enterprise solutions.">
+    <meta name="keywords" content="software consulting, backend development, distributed systems, DevOps, CI/CD, containerization, enterprise solutions">
 
     <script src="js/site.js"></script>
 
   </head>
 
   <body>
-    <div class="container">
-      <div class="column">
-        <h2>Conor Sloan - Software Engineer</h2>
-        <p>
-          Experienced multi-discipline Software Engineer @ <a href="https://www.github.com">GitHub</a>. Previously <a href="https://www.apple.com/">Apple</a>, <a href="https://www.amazon.co.uk/">Amazon</a>, <a href="http://home.bt.com/">BT</a>, <a href="https://www.oracle.com/index.html">Oracle</a>.
-        </p>
-
-        <hr />
-
-        <div class="info">
-          <p>👋 Hi! I am currently <b>not</b> actively looking for new full-time opportunities, but I am open to hearing about <b>fully remote</b> roles. Feel free to get in touch!</p>
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <div class="logo-placeholder">
+              <!-- Logo will go here -->
+              <h1 class="text-2xl font-bold text-primary-600 font-display">Conor Sloan Consultancy Ltd</h1>
+            </div>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="#about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">About</a>
+            <a href="#services" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Services</a>
+            <a href="#projects" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Projects</a>
+            <a href="#experience" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Experience</a>
+            <a href="#contact" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Contact</a>
+          </nav>
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button class="text-gray-600 hover:text-primary-600">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
+      </div>
+    </header>
 
-        <div class="accordion-container">
-          <button class="accordion" onclick="toggleAccordion(this)">📃 Curriculum Vitae</button>
-          <div class="panel">
-            <div class="pdf-container">
-              <iframe width="100%" height="60%" src="dependencies/pdfjs/web/viewer.html?file=../../../files/2025-CV.pdf"></iframe>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto">
+          <div class="mb-6">
+            <span class="inline-block bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+              👋 Hey, I'm Conor 🙂
+            </span>
+          </div>
+          <h1 class="text-5xl md:text-6xl font-bold mb-6 font-display">I help teams ship better software, faster</h1>
+          <p class="text-xl md:text-2xl mb-6 text-white text-opacity-90 max-w-3xl mx-auto">
+            I'm a Software Engineer with 14 years experience building robust, scalable systems at elite tech companies. 
+          </p>
+          <div class="text-lg mb-8 max-w-2xl mx-auto text-white text-opacity-80">
+            <p>Now I help startups and scale-ups modernize their tech stack, fix their CI/CD, and build the kind of software that customers love - the kind that works 🚀</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contact" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-200 shadow-lg">Let's Talk About Your Project</a>
+            <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-200">See How I Can Help</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">A Little About Me</h2>
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+            With extensive experience at leading technology companies including <strong class="text-gray-900">GitHub</strong>, <strong class="text-gray-900">Apple</strong>, <strong class="text-gray-900">Amazon</strong>, <strong class="text-gray-900">BT</strong>, and <strong class="text-gray-900">Oracle</strong>, I provide enterprise-grade software consulting services to help organizations build scalable, reliable systems.
+          </p>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            As an early adopter of agentic AI and with deep expertise in distributed systems, I help companies navigate complex technical challenges and implement solutions that drive business growth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services/Specialisms Section -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">Core Specialisms & Consulting Areas</h2>
+        
+        <!-- Specialized Consulting Areas Grid -->
+        <div class="mb-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            
+            <!-- Legacy Systems -->
+            <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-cogs text-3xl text-white"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-2xl font-bold mb-4">Legacy Systems Modernization</h4>
+                  <p class="text-lg leading-relaxed text-white text-opacity-90">
+                    Looking to refactor or redesign your existing software application or platform? Perhaps you want to perform a migration to take advantage of new cloud SaaS solutions? Through my experiences at <strong>Oracle</strong> and <strong>Amazon</strong>, I have extensive experience in the safe and gradual modernization of legacy applications and platforms.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- SDLC Enhancement -->
+            <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-rocket text-3xl text-white"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-2xl font-bold mb-4">Enhancing Software Development Lifecycle</h4>
+                  <p class="text-lg leading-relaxed text-white text-opacity-90">
+                    Having worked at 3 of the "Magnificent Seven" companies, and through my current role at <strong>GitHub</strong> working on Actions & Packages, I can advise organizations wishing to raise the bar on engineering excellence. Whether it's introducing CI/CD, improved testing strategies, or utilizing AI, I can help modernize your development practices.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shipping Features -->
+            <div class="bg-gradient-to-br from-green-500 to-green-700 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-shipping-fast text-3xl text-white"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-2xl font-bold mb-4">Shipping New Features</h4>
+                  <p class="text-lg leading-relaxed text-white text-opacity-90">
+                    I can work in an advisory capacity, but I'm still an IC at heart, and I love to get my hands dirty. If you need support shipping a new feature, I'm happy to lend my expertise and the strong ability to execute on complex projects that I've developed throughout my career.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Distributed Systems -->
+            <div class="bg-gradient-to-br from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-project-diagram text-3xl text-white"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-2xl font-bold mb-4">Distributed Systems at Scale</h4>
+                  <p class="text-lg leading-relaxed text-white text-opacity-90">
+                    Is your system struggling under its current load? I can help! I've worked on large software services like <strong>bookdepository.com</strong>, <strong>Amazon.co.uk</strong>, <strong>iCloud</strong>, and <strong>GitHub's Container Registry (ghcr.io)</strong>. I have deep understanding of scaling software systems and can ensure your business isn't a victim of its own success.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="bg-gradient-to-br from-teal-500 to-cyan-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-3xl text-white"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-2xl font-bold mb-4">High Availability & Reliability</h4>
+                  <p class="text-lg leading-relaxed text-white text-opacity-90">
+                    Online services should strive for 99.9% or even 99.99% availability. At <strong>GitHub</strong>, I acted as Availability Champion for Actions, Packages & Pages. I'm keenly aware of what it takes to keep services running, even during disaster recovery scenarios, and can help define post-incident processes for continuous organizational learning.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Adoption & Integration -->
+            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-brain text-3xl text-white"></i>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-2xl font-bold mb-4">AI Adoption & Integration</h4>
+                  <p class="text-lg leading-relaxed text-white text-opacity-90">
+                    Ready to harness the power of AI in your organization? Working at <strong>GitHub</strong> during the AI revolution—where Copilot transformed how millions of developers work and helped drive <strong>Microsoft's</strong> AI strategy—I've seen firsthand how AI can revolutionize productivity. I can help your business identify AI opportunities, implement solutions safely, and build AI-powered features that delight your customers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Core Technologies & Skills Grid -->
+        <div class="mt-20">
+          <h3 class="text-2xl font-bold text-center mb-8 text-gray-700">Technical Expertise</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div class="service-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center fade-in">
+              <div class="text-3xl text-primary-600 mb-3">
+                <i class="fas fa-server"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-gray-900">Backend Systems</h4>
+            </div>
+            <div class="service-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center fade-in">
+              <div class="text-3xl text-primary-600 mb-3">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-gray-900">Distributed Systems</h4>
+            </div>
+            <div class="service-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center fade-in">
+              <div class="text-3xl text-primary-600 mb-3">
+                <i class="fab fa-docker"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-gray-900">Containerization</h4>
+            </div>
+            <div class="service-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center fade-in">
+              <div class="text-3xl text-primary-600 mb-3">
+                <i class="fas fa-code-branch"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-gray-900">DevOps & CI/CD</h4>
+            </div>
+            <div class="service-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center fade-in">
+              <div class="text-3xl text-primary-600 mb-3">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-gray-900">Agentic AI</h4>
+            </div>
+            <div class="service-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center fade-in">
+              <div class="text-3xl text-primary-600 mb-3">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-gray-900">System Architecture</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">Project Portfolio</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="h-48 bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+              <i class="fas fa-image text-4xl mb-2"></i>
+              <p class="text-sm">Project Screenshot</p>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-3 text-gray-900">Enterprise System Integration</h3>
+              <p class="text-gray-600 leading-relaxed">Coming soon - showcase of enterprise-level system integration projects.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="h-48 bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+              <i class="fas fa-image text-4xl mb-2"></i>
+              <p class="text-sm">Project Screenshot</p>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-3 text-gray-900">Cloud Migration Solutions</h3>
+              <p class="text-gray-600 leading-relaxed">Coming soon - examples of successful cloud migration and modernization projects.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="h-48 bg-gray-100 flex flex-col items-center justify-center text-gray-400">
+              <i class="fas fa-image text-4xl mb-2"></i>
+              <p class="text-sm">Project Screenshot</p>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-3 text-gray-900">DevOps Automation</h3>
+              <p class="text-gray-600 leading-relaxed">Coming soon - showcase of CI/CD pipeline implementations and automation solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section (Hidden) -->
+    <section id="testimonials" class="section section-gray testimonials-hidden">
+      <div class="container">
+        <h2 class="section-title">Client Testimonials</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Testimonials will be displayed here once available."</p>
+            <div class="testimonial-author">
+              <strong>Client Name</strong>
+              <span>Company, Title</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">Professional Experience</h2>
+        
+        <div class="max-w-4xl mx-auto space-y-4">
+          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+              <span class="flex items-center space-x-3">
+                <span class="text-2xl">📃</span>
+                <span>Full Curriculum Vitae</span>
+              </span>
+              <i class="fas fa-chevron-down transform transition-transform"></i>
+            </button>
+            <div class="panel hidden px-6 pb-6">
+              <div class="border rounded-lg overflow-hidden">
+                <iframe width="100%" height="500px" src="dependencies/pdfjs/web/viewer.html?file=../../../files/2025-CV.pdf" class="border-0"></iframe>
+              </div>
             </div>
           </div>
 
-          <button class="accordion" onclick="toggleAccordion(this)">👨🏻‍💻 How I Work</button>
-          <div class="panel">
-            I tend towards the following habits; they provide an outline of how I like to work. <br /><br />
-
-            <ul>
-              <li>I ask <b>lots of questions</b>, though I often prefer consulting good documentation.</li>
-              <li>I love to <b>design systems and architectures</b>, though I like to stay in the code.</li>
-              <li>So far, I have chosen <b>adaptability over specialisation</b>. I learn fast, but I'm not a world-leading expert in one area.</li>
-              <li>I believe strongly in the '<b>softer skills</b>'. I like to present, discuss ideas, and build relationships.</li>
-              <li>I value <b>personal connections</b>. It matters to me that my colleagues are happy, and I will work in aid of that goal.</li>
-              <li>The trait I value most highly is <b>pragmatism</b>. I am rarely stuck in my ways, and I hope to see that in others.</li>
-            </ul>
-
-            For a broader picture of my personality, the description of the <a href="https://www.16personalities.com/enfp-personality">ENFP personality type</a> doesn't do a bad job!<br /><br />
+          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+              <span class="flex items-center space-x-3">
+                <span class="text-2xl">✨</span>
+                <span>Career Highlights</span>
+              </span>
+              <i class="fas fa-chevron-down transform transition-transform"></i>
+            </button>
+            <div class="panel hidden px-6 pb-6">
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">GitHub:</strong> <span class="text-gray-700">Availability Champion for GitHub Actions & Packages, driving cross-org improvements in post-incident processes</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">Apple:</strong> <span class="text-gray-700">Promoted from ICT3 to ICT4 and appointed as Tech Lead</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">Amazon:</strong> <span class="text-gray-700">Promoted from SDE1 to SDE2 with 'outstanding' first-year review</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">Speaking:</strong> <span class="text-gray-700">Presented at Amazon's WebDevCon on mobile hybrid apps using Apache Cordova</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">BT:</strong> <span class="text-gray-700">Ranked joint-highest of 10 interns at BT GES Summer Research Internship</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">Oracle:</strong> <span class="text-gray-700">Received <a href="https://drive.google.com/file/d/0B2HMk1AmTvyATFFicUVXbUtzZ3M/view?usp=sharing" class="text-primary-600 hover:text-primary-700 underline">personal recommendation</a> from Principal Engineer</span></div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <button class="accordion" onclick="toggleAccordion(this)">✨ Career Highlights</button>
-          <div class="panel">
-            <ul>
-              <li>Availability Champion for GitHub Actions & Packages, driving cross-org improvements in GitHub's post-incident process</li>
-              <li>Achieved promotion from ICT3 to ICT4 at Apple, and was also made Tech Lead</li>
-              <li>Achieved promotion from SDE1 to SDE2 at Amazon, having achieved an 'outstanding' review in the first year</li>
-              <li>Spoke at Amazon's WebDevCon, discussing mobile hybrid apps built using Apache Cordova</li>
-              <li>Ranked joint-highest of the 10 interns at BT GES Summer Research Internship</li>
-              <li>Received a <a href="https://drive.google.com/file/d/0B2HMk1AmTvyATFFicUVXbUtzZ3M/view?usp=sharing">Personal Recommendation</a> from a Principal Engineer I worked with at Oracle.</li>
-            </ul>
+          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+              <span class="flex items-center space-x-3">
+                <span class="text-2xl">🎯</span>
+                <span>Working Style</span>
+              </span>
+              <i class="fas fa-chevron-down transform transition-transform"></i>
+            </button>
+            <div class="panel hidden px-6 pb-6">
+              <p class="text-gray-700 mb-4">My approach to consulting and technical leadership:</p>
+              <div class="space-y-3">
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">Inquisitive:</strong> <span class="text-gray-700">I ask detailed questions and thoroughly research solutions before implementation</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">Architectural:</strong> <span class="text-gray-700">I excel at designing systems and architectures while staying hands-on with code</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">Adaptable:</strong> <span class="text-gray-700">I prioritize adaptability over narrow specialization, learning quickly across domains</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">Collaborative:</strong> <span class="text-gray-700">I value presentation skills, idea discussion, and building strong professional relationships</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">People-focused:</strong> <span class="text-gray-700">I believe team happiness and collaboration are essential for successful projects</span></div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div><strong class="text-gray-900">Pragmatic:</strong> <span class="text-gray-700">I favor practical, flexible solutions over rigid approaches</span></div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <button class="accordion" onclick="toggleAccordion(this)">📚 Education</button>
-          <div class="panel">
-            <ul>
-              <li>1st in BSc Computer Science from <a href="https://www.leeds.ac.uk/">University of Leeds</a></li>
-              <ul>
-                <li>Winner of the Cook Prize for "Best performance in the final year in the School of Computing"</li>
-                <li> My final year paper, <a href="https://github.com/conorsloan/FinalYearProject/blob/master/Report/pdf/FYP.pdf">An Evaluation of OpenStack</a>, was awarded a 1st</li>
-              </ul>
-            </ul>
+          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+              <span class="flex items-center space-x-3">
+                <span class="text-2xl">📚</span>
+                <span>Education</span>
+              </span>
+              <i class="fas fa-chevron-down transform transition-transform"></i>
+            </button>
+            <div class="panel hidden px-6 pb-6">
+              <div class="space-y-6">
+                <div class="border-l-4 border-primary-500 pl-4">
+                  <div class="font-semibold text-gray-900 text-lg">1st Class Honours in BSc Computer Science</div>
+                  <div class="text-primary-600 font-medium">University of Leeds</div>
+                  <div class="mt-2 space-y-1 text-gray-700">
+                    <div>• Winner of the Cook Prize for "Best performance in the final year in the School of Computing"</div>
+                    <div>• Final year paper: <a href="https://github.com/conorsloan/FinalYearProject/blob/master/Report/pdf/FYP.pdf" class="text-primary-600 hover:text-primary-700 underline">An Evaluation of OpenStack</a> (1st Class)</div>
+                  </div>
+                </div>
+                
+                <div class="border-l-4 border-primary-500 pl-4">
+                  <div class="font-semibold text-gray-900 text-lg">AAA at A Level</div>
+                  <div class="text-primary-600 font-medium">Calday Grange Grammar School</div>
+                  <div class="mt-2 text-gray-700">
+                    <div>• Winner of the Computing A Level Award for highest overall score</div>
+                  </div>
+                </div>
 
-            <button class="uni-table-button" onclick="toggleViewTable(this, 'uni-table', 'Hide Module Grades', 'Show Module Grades')">Show Module Grades</button>
-            <table class="u-full-width uni-table" style="display: none;">
-              <tbody>
-                <tr>
-                  <th>
-                    Module
-                  </th>
-                  <th>
-                    Grade
-                  </th>
-                </tr>
-                <tr>
-                  <td>
-                    Final Year Project - An Evaluation of OpenStack
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Parallel Scientific Computing
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Natural Language Processing
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Biological &amp; Bio-Inspired Computation
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Distributed Systems
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Knowledge Representation
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    User Adaptive Intelligent Systems
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Artificial Intelligence
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Interactive Database Systems
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Software Systems Engineering
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Theoretical Computer Science
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Practical Problem Solving
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Core Programming
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Modelling, Analysis &amp; Algorithm Design
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Maths for Computing
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Project Management
-                  </td>
-                  <td>
-                    1st
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Numerical Computation &amp; Visualisation
-                  </td>
-                  <td>
-                    2:1
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Professional Development
-                  </td>
-                  <td>
-                    2:1
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Computer Systems
-                  </td>
-                  <td>
-                    2:1
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <ul>
-              <li>AAA at A Level from <a href="https://calday.co.uk/">Calday Grange Grammar School</a></li>
-              <ul>
-                <li>Winner of the Computing A Level Award for highest overall score</li>
-              </ul>
-            </ul>
-
-            <button class="alevel-table-button" onclick="toggleViewTable(this, 'alevel-table', 'Hide A Level Results', 'Show A Level Results')">Show A Level Results</button>
-            <table class="u-full-width alevel-table" style="display: none;">
-              <tbody>
-                <tr>
-                  <th>
-                    Subject
-                  </th>
-                  <th>
-                    Grade
-                  </th>
-                </tr>
-                <tr>
-                  <td>
-                    Computing
-                  </td>
-                  <td>
-                    A
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Economics
-                  </td>
-                  <td>
-                    A
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Law
-                  </td>
-                  <td>
-                    A
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    General Studies
-                  </td>
-                  <td>
-                    A*
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <br /><br />
-
+                <div class="mt-6">
+                  <button class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm font-medium text-gray-700 transition-colors" onclick="toggleViewTable(this, 'uni-table', 'Hide Module Grades', 'Show Module Grades')">Show Module Grades</button>
+                  <div class="uni-table hidden mt-4 overflow-hidden rounded-lg border border-gray-200">
+                    <table class="w-full">
+                      <thead class="bg-gray-50">
+                        <tr>
+                          <th class="px-4 py-3 text-left font-medium text-gray-900">Module</th>
+                          <th class="px-4 py-3 text-left font-medium text-gray-900">Grade</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-gray-200">
+                        <tr><td class="px-4 py-3 text-gray-700">Final Year Project - An Evaluation of OpenStack</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Parallel Scientific Computing</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Natural Language Processing</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Biological &amp; Bio-Inspired Computation</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Distributed Systems</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Knowledge Representation</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">User Adaptive Intelligent Systems</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Artificial Intelligence</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Interactive Database Systems</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Software Systems Engineering</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Theoretical Computer Science</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Practical Problem Solving</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Core Programming</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Modelling, Analysis &amp; Algorithm Design</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Maths for Computing</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Project Management</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Numerical Computation &amp; Visualisation</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Professional Development</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Computer Systems</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <button class="accordion" onclick="toggleAccordion(this)">🎸 Personal Interests</button>
-          <div class="panel">
-            <p>🥊 <strong>Boxing</strong><br>I was a member of my local hometown club from age 11-18. I still keep up training, but just for fitness!</p>
-            <p>⚽️ <strong>Football</strong><br>I am a boyhood fan of <a href="https://www.liverpoolfc.com">Liverpool FC</a>, as are many from the little merseyside peninsula I'm from. <br>I was also lucky enough to be at <a href="https://www.skysports.com/football/news/11945/11984568/liverpool-4-0-barcelona-stunning-reds-comeback-revisited">this game</a>! </p>
-            <p>🎸 <strong>Guitar</strong><br>I learned to play during the pandemic by following Paul Davids' "<a href="https://learnpracticeplay.com/signup/">Learn, Practice, Play</a>" course.<br> I mostly play fingerstyle acoustic music.
+          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+              <span class="flex items-center space-x-3">
+                <span class="text-2xl">🎯</span>
+                <span>Full-Time Employment</span>
+              </span>
+              <i class="fas fa-chevron-down transform transition-transform"></i>
+            </button>
+            <div class="panel hidden px-6 pb-6">
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                <p class="text-blue-800"><strong>Currently Available for Consulting</strong> - I am focusing on building Conor Sloan Consultancy Ltd, but I remain open to discussing <strong>fully remote</strong> senior engineering or technical leadership roles with exceptional opportunities.</p>
+              </div>
+            </div>
           </div>
-
         </div>
+      </div>
+    </section>
 
-        <div class="social-btns">
-          <a class="btn twitter" href="https://twitter.com/csloan7597">
-            <i class="fab fa-twitter-square fa-2x"></i>
-          </a>
-          <a class="btn github" href="https://github.com/conorsloan">
-            <i class="fab fa-github-square fa-2x"></i>
-          </a>
-          <a class="btn linkedin" href="https://www.linkedin.com/in/csloan7597/">
-            <i class="fab fa-linkedin fa-2x"></i>
-          </a>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">Get in Touch</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-2xl font-semibold mb-4 text-gray-900">Ready to discuss your project?</h3>
+              <p class="text-lg text-gray-600 leading-relaxed">I'd love to hear about your technical challenges and explore how I can help your organization succeed.</p>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-envelope text-primary-600 text-xl"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">Email</div>
+                  <p class="text-gray-600">conor@conorsloan.uk</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <i class="fab fa-linkedin text-primary-600 text-xl"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">LinkedIn</div>
+                  <p class="text-gray-600"><a href="https://www.linkedin.com/in/csloan7597/" class="text-primary-600 hover:text-primary-700">Connect with me</a></p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <i class="fab fa-github text-primary-600 text-xl"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">GitHub</div>
+                  <p class="text-gray-600"><a href="https://github.com/conorsloan" class="text-primary-600 hover:text-primary-700">View my work</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-semibold mb-6 text-gray-900">Send a Message</h3>
+            <form action="#" method="POST" class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors">
+              </div>
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors">
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or technical challenge..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transform hover:-translate-y-1 transition-all duration-200 shadow-lg">Send Message</button>
+            </form>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-2xl font-bold mb-4 font-display">Conor Sloan Consultancy Ltd</h3>
+            <p class="text-gray-300 text-lg mb-6">Expert software consulting services for enterprise solutions</p>
+            <div class="flex space-x-6">
+              <a href="https://www.linkedin.com/in/csloan7597/" class="text-gray-400 hover:text-primary-400 transition-colors text-2xl">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/conorsloan" class="text-gray-400 hover:text-primary-400 transition-colors text-2xl">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://twitter.com/csloan7597" class="text-gray-400 hover:text-primary-400 transition-colors text-2xl">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Core Services</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>Backend Systems</li>
+              <li>Distributed Architecture</li>
+              <li>DevOps & CI/CD</li>
+              <li>System Design</li>
+              <li>Agentic AI</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center">
+          <p class="text-gray-400">&copy; 2025 Conor Sloan Consultancy Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
   </body>
