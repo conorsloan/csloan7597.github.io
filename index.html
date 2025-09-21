@@ -460,6 +460,12 @@
               <i class="fas fa-chevron-down transform transition-transform"></i>
             </button>
             <div class="panel hidden px-6 pb-6">
+              <div class="mb-4">
+                <a href="files/2025-CV.pdf" download="Conor-Sloan-CV-2025.pdf" class="inline-flex items-center px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-700 transition-colors">
+                  <i class="fas fa-download mr-2"></i>
+                  Download CV
+                </a>
+              </div>
               <div class="border rounded-lg overflow-hidden">
                 <iframe width="100%" height="500px" src="dependencies/pdfjs/web/viewer.html?file=../../../files/2025-CV.pdf" class="border-0"></iframe>
               </div>
@@ -482,14 +488,6 @@
                   <div class="mt-2 space-y-1 text-gray-700">
                     <div>• Winner of the Cook Prize for "Best performance in the final year in the School of Computing"</div>
                     <div>• Final year paper: <a href="https://github.com/conorsloan/FinalYearProject/blob/master/Report/pdf/FYP.pdf" class="text-primary-600 hover:text-primary-700 underline">An Evaluation of OpenStack</a> (1st Class)</div>
-                  </div>
-                </div>
-                
-                <div class="border-l-4 border-primary-500 pl-4">
-                  <div class="font-semibold text-gray-900 text-lg">AAA at A Level</div>
-                  <div class="text-primary-600 font-medium">Calday Grange Grammar School</div>
-                  <div class="mt-2 text-gray-700">
-                    <div>• Winner of the Computing A Level Award for highest overall score</div>
                   </div>
                 </div>
 
@@ -523,6 +521,35 @@
                         <tr><td class="px-4 py-3 text-gray-700">Numerical Computation &amp; Visualisation</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
                         <tr><td class="px-4 py-3 text-gray-700">Professional Development</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
                         <tr><td class="px-4 py-3 text-gray-700">Computer Systems</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+                <div class="border-l-4 border-primary-500 pl-4">
+                  <div class="font-semibold text-gray-900 text-lg">A*AAA at A Level</div>
+                  <div class="text-primary-600 font-medium">Calday Grange Grammar School</div>
+                  <div class="mt-2 space-y-1 text-gray-700">
+                    <div>• Studied Computing, Economics, Law & General Studies</div>
+                    <div>• Winner of Computing A Level Award for highest overall score</div>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <button class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm font-medium text-gray-700 transition-colors" onclick="toggleViewTable(this, 'alevel-table', 'Hide A Level Grades', 'Show A Level Grades')">Show A Level Grades</button>
+                  <div class="alevel-table hidden mt-4 overflow-hidden rounded-lg border border-gray-200">
+                    <table class="w-full">
+                      <thead class="bg-gray-50">
+                        <tr>
+                          <th class="px-4 py-3 text-left font-medium text-gray-900">Subject</th>
+                          <th class="px-4 py-3 text-left font-medium text-gray-900">Grade</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-gray-200">
+                        <tr><td class="px-4 py-3 text-gray-700">General Studies</td><td class="px-4 py-3 font-medium text-green-600">A*</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Computing</td><td class="px-4 py-3 font-medium text-green-600">A</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Economics</td><td class="px-4 py-3 font-medium text-green-600">A</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Law</td><td class="px-4 py-3 font-medium text-green-600">A</td></tr>
                       </tbody>
                     </table>
                   </div>
@@ -629,7 +656,7 @@
                 </div>
                 <div>
                   <div class="font-semibold text-gray-900">Email</div>
-                  <p class="text-gray-600">conor@conorsloan.uk</p>
+                  <p class="text-gray-600"><a href="mailto:work@conorsloan.uk" class="text-primary-600 hover:text-primary-700">work@conorsloan.uk</a></p>
                 </div>
               </div>
               <div class="flex items-center space-x-4">
@@ -685,7 +712,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div class="col-span-1 md:col-span-2">
             <h3 class="text-2xl font-bold mb-4 font-display">Conor Sloan Consultancy Ltd</h3>
-            <p class="text-gray-300 text-lg mb-6">Expert software consulting services for enterprise solutions</p>
+            <p class="text-gray-300 text-lg mb-6">Software Consultant based in Merseyside, UK</p>
             <div class="flex space-x-6">
               <a href="https://www.linkedin.com/in/csloan7597/" class="text-gray-400 hover:text-primary-400 transition-colors text-2xl">
                 <i class="fab fa-linkedin"></i>
@@ -697,16 +724,6 @@
                 <i class="fab fa-twitter"></i>
               </a>
             </div>
-          </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Core Services</h4>
-            <ul class="space-y-2 text-gray-300">
-              <li>Backend Systems</li>
-              <li>Distributed Architecture</li>
-              <li>DevOps & CI/CD</li>
-              <li>System Design</li>
-              <li>Agentic AI</li>
-            </ul>
           </div>
         </div>
         <div class="border-t border-gray-800 pt-8 text-center">
