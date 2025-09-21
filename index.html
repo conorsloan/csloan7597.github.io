@@ -47,7 +47,19 @@
       }
       
       .gradient-bg {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #45C1BF 0%, #2D9CDB 100%);
+        position: relative;
+      }
+      .gradient-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+        background-size: 20px 20px;
+        pointer-events: none;
       }
       .service-card:hover {
         transform: translateY(-4px);
@@ -92,7 +104,7 @@
           <div class="flex items-center">
             <div class="logo-placeholder">
               <!-- Logo will go here -->
-              <h1 class="text-2xl font-medium text-primary-600 font-display">Conor Sloan Consultancy</h1>
+              <h1 class="text-2xl font-medium font-display" style="color: #45C1BF;">Conor Sloan <span class="font-extralight text-opacity-70" style="color: #45C1BF;">| Consultancy</span></h1>
             </div>
           </div>
           <nav class="hidden md:flex space-x-8">
@@ -431,18 +443,16 @@
     <!-- Hire Me Section -->
     <section id="experience" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-center mb-8 text-gray-900 font-display">Hire me Full Time</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 text-gray-900 font-display">Hire Me Full Time</h2>
         
         <!-- Employment Status -->
-        <div class="max-w-4xl mx-auto mb-12">
-          <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-6 rounded-lg">
-            <p class="text-blue-900 text-lg"><strong>Currently Available for Consulting</strong> - I am focusing on building Conor Sloan Consultancy Ltd, but I remain open to discussing <strong>fully remote</strong> senior engineering or technical leadership roles with exceptional opportunities.</p>
-          </div>
-        </div>
+        <div class="max-w-4xl mx-auto mb-12 text-center">
+          <p class="text-gray-700 text-lg">Though I'm chiefly focusing on my job at GitHub and consulting, I'm open to discussing <strong>fully remote</strong> senior engineering or technical leadership opportunities.</p>
+        </div>  
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto hire-grid">
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+          <div class="bg-white border border-gray-200 rounded-lg">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
               <span class="flex items-center space-x-3">
                 <span class="text-2xl">📃</span>
                 <span>Full Curriculum Vitae</span>
@@ -456,8 +466,8 @@
             </div>
           </div>
 
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+          <div class="bg-white border border-gray-200 rounded-lg">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
               <span class="flex items-center space-x-3">
                 <span class="text-2xl">📚</span>
                 <span>Education</span>
@@ -521,8 +531,8 @@
             </div>
           </div>
 
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+          <div class="bg-white border border-gray-200 rounded-lg">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
               <span class="flex items-center space-x-3">
                 <span class="text-2xl">✨</span>
                 <span>Career Highlights</span>
@@ -559,8 +569,8 @@
             </div>
           </div>
 
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+          <div class="bg-white border border-gray-200 rounded-lg">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
               <span class="flex items-center space-x-3">
                 <span class="text-2xl">🎯</span>
                 <span>Working Style</span>
