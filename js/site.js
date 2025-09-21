@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetElement = document.querySelector(targetId);
       
       if (targetElement) {
-        const headerHeight = document.querySelector('.header').offsetHeight;
+        const headerHeight = document.querySelector('header').offsetHeight;
         const targetPosition = targetElement.offsetTop - headerHeight - 20;
         
         window.scrollTo({
