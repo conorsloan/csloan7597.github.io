@@ -61,6 +61,18 @@
         opacity: 1;
         transform: translateY(0);
       }
+      
+      /* Prevent service grid items from stretching when adjacent items expand */
+      .services-grid > div {
+        align-self: start;
+      }
+      /* Prevent hire grid items from stretching when adjacent items expand */
+      .hire-grid > div {
+        align-self: start;
+      }
+
+      
+
     </style>
 
     <meta charset="UTF-8" />
@@ -86,8 +98,8 @@
           <nav class="hidden md:flex space-x-8">
             <a href="#about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">About</a>
             <a href="#services" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Services</a>
-            <a href="#projects" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Projects</a>
-            <a href="#experience" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Experience</a>
+
+            <a href="#experience" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Hire Me Full Time</a>
             <a href="#contact" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Contact</a>
           </nav>
           <!-- Mobile menu button -->
@@ -296,111 +308,117 @@
     <!-- Services/Specialisms Section -->
     <section id="services" class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">Core Specialisms & Consulting Areas</h2>
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">How I Can Help</h2>
         
-        <!-- Specialized Consulting Areas Grid -->
+        <!-- Services Accordions Grid -->
         <div class="mb-16">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto services-grid">
             
-            <!-- Legacy Systems -->
-            <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="flex-shrink-0">
-                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-cogs text-3xl text-white"></i>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-2xl font-bold mb-4">Legacy Systems Modernization</h4>
-                  <p class="text-lg leading-relaxed text-white text-opacity-90">
-                    Looking to refactor or redesign your existing software application or platform? Perhaps you want to perform a migration to take advantage of new cloud SaaS solutions? Through my experiences at <strong>Oracle</strong> and <strong>Amazon</strong>, I have extensive experience in the safe and gradual modernization of legacy applications and platforms.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- SDLC Enhancement -->
-            <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="flex-shrink-0">
-                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-rocket text-3xl text-white"></i>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-2xl font-bold mb-4">Enhancing Software Development Lifecycle</h4>
-                  <p class="text-lg leading-relaxed text-white text-opacity-90">
-                    Having worked at 3 of the "Magnificent Seven" companies, and through my current role at <strong>GitHub</strong> working on Actions & Packages, I can advise organisations wishing to raise the bar on engineering excellence. Whether it's introducing CI/CD, improved testing strategies, or utilizing AI, I can help modernize your development practices.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Shipping Features -->
-            <div class="bg-gradient-to-br from-green-500 to-green-700 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="flex-shrink-0">
-                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-shipping-fast text-3xl text-white"></i>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-2xl font-bold mb-4">Shipping New Features</h4>
-                  <p class="text-lg leading-relaxed text-white text-opacity-90">
-                    I can work in an advisory capacity, but I'm still an IC at heart, and I love to get my hands dirty. If you need support shipping a new feature, I'm happy to lend my expertise and the strong ability to execute on complex projects that I've developed throughout my career.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Distributed Systems -->
-            <div class="bg-gradient-to-br from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="flex-shrink-0">
-                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-project-diagram text-3xl text-white"></i>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-2xl font-bold mb-4">Distributed Systems at Scale</h4>
-                  <p class="text-lg leading-relaxed text-white text-opacity-90">
-                    Is your system struggling under its current load? I can help! I've worked on large software services like <strong>bookdepository.com</strong>, <strong>Amazon.co.uk</strong>, <strong>iCloud</strong>, and <strong>GitHub's Container Registry (ghcr.io)</strong>. I have deep understanding of scaling software systems and can ensure your business isn't a victim of its own success.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Availability -->
-            <div class="bg-gradient-to-br from-teal-500 to-cyan-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="flex-shrink-0">
-                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-shield-alt text-3xl text-white"></i>
-                  </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-2xl font-bold mb-4">High Availability & Reliability</h4>
-                  <p class="text-lg leading-relaxed text-white text-opacity-90">
-                    Online services should strive for 99.9% or even 99.99% availability. At <strong>GitHub</strong>, I acted as Availability Champion for Actions, Packages & Pages. I'm keenly aware of what it takes to keep services running, even during disaster recovery scenarios, and can help define post-incident processes for continuous organizational learning.
-                  </p>
-                </div>
-              </div>
-            </div>
-
             <!-- AI Adoption & Integration -->
-            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="flex-shrink-0">
-                  <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-brain text-3xl text-white"></i>
+            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+              <button class="w-full px-8 py-6 text-left font-medium text-white hover:bg-black hover:bg-opacity-20 focus:outline-none transition-colors flex items-center justify-between" data-target="ai-panel" onclick="toggleAccordion(this)">
+                <span class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-brain text-2xl text-white"></i>
                   </div>
-                </div>
-                <div class="flex-1">
-                  <h4 class="text-2xl font-bold mb-4">AI Adoption & Integration</h4>
-                  <p class="text-lg leading-relaxed text-white text-opacity-90">
-                    Ready to harness the power of AI in your organization? Working at <strong>GitHub</strong> during the AI revolution—where Copilot transformed how millions of developers work and helped drive <strong>Microsoft's</strong> AI strategy—I've seen firsthand how AI can revolutionize productivity. I can help your business identify AI opportunities, implement solutions safely, and build AI-powered features that delight your customers.
-                  </p>
-                </div>
+                  <span class="text-xl font-display">AI Adoption & Integration</span>
+                </span>
+                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+              </button>
+              <div class="panel hidden px-8 pb-8" id="ai-panel">
+                <p class="text-lg leading-relaxed text-white text-opacity-90">
+                  Ready to harness the power of AI in your organization? Working at <strong>GitHub</strong> during the AI revolution—where Copilot transformed how millions of developers work and helped drive <strong>Microsoft's</strong> AI strategy—I've seen firsthand how AI can revolutionize productivity. I can help your business identify AI opportunities, implement solutions safely, and build AI-powered features that delight your customers.
+                </p>
+              </div>
+            </div>
+
+            <!-- Distributed Systems at Scale -->
+            <div class="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+              <button class="w-full px-8 py-6 text-left font-medium text-white hover:bg-black hover:bg-opacity-20 focus:outline-none transition-colors flex items-center justify-between" data-target="distributed-panel" onclick="toggleAccordion(this)">
+                <span class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-project-diagram text-2xl text-white"></i>
+                  </div>
+                  <span class="text-xl font-display">Distributed Systems at Scale</span>
+                </span>
+                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+              </button>
+              <div class="panel hidden px-8 pb-8" id="distributed-panel">
+                <p class="text-lg leading-relaxed text-white text-opacity-90">
+                  Is your system struggling under its current load? I can help! I've worked on large software services like <strong>bookdepository.com</strong>, <strong>Amazon.co.uk</strong>, <strong>iCloud</strong>, and <strong>GitHub's Container Registry (ghcr.io)</strong>. I have deep understanding of scaling software systems and can ensure your business isn't a victim of its own success.
+                </p>
+              </div>
+            </div>
+
+            <!-- Enhancing Software Development Lifecycle -->
+            <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+              <button class="w-full px-8 py-6 text-left font-medium text-white hover:bg-black hover:bg-opacity-20 focus:outline-none transition-colors flex items-center justify-between" data-target="sdlc-panel" onclick="toggleAccordion(this)">
+                <span class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-rocket text-2xl text-white"></i>
+                  </div>
+                  <span class="text-xl font-display">Enhancing Software Development Lifecycle</span>
+                </span>
+                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+              </button>
+              <div class="panel hidden px-8 pb-8" id="sdlc-panel">
+                <p class="text-lg leading-relaxed text-white text-opacity-90">
+                  Having worked at 3 of the "Magnificent Seven" companies, and through my current role at <strong>GitHub</strong> working on Actions & Packages, I can advise organisations wishing to raise the bar on engineering excellence. Whether it's introducing CI/CD, improved testing strategies, or utilizing AI, I can help modernize your development practices.
+                </p>
+              </div>
+            </div>
+
+            <!-- High Availability & Reliability -->
+            <div class="bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+              <button class="w-full px-8 py-6 text-left font-medium text-white hover:bg-black hover:bg-opacity-20 focus:outline-none transition-colors flex items-center justify-between" data-target="availability-panel" onclick="toggleAccordion(this)">
+                <span class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-2xl text-white"></i>
+                  </div>
+                  <span class="text-xl font-display">High Availability & Reliability</span>
+                </span>
+                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+              </button>
+              <div class="panel hidden px-8 pb-8" id="availability-panel">
+                <p class="text-lg leading-relaxed text-white text-opacity-90">
+                  Online services should strive for 99.9% or even 99.99% availability. At <strong>GitHub</strong>, I acted as Availability Champion for Actions, Packages & Pages. I'm keenly aware of what it takes to keep services running, even during disaster recovery scenarios, and can help define post-incident processes for continuous organizational learning.
+                </p>
+              </div>
+            </div>
+
+            <!-- Legacy Systems Modernization -->
+            <div class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+              <button class="w-full px-8 py-6 text-left font-medium text-white hover:bg-black hover:bg-opacity-20 focus:outline-none transition-colors flex items-center justify-between" data-target="legacy-panel" onclick="toggleAccordion(this)">
+                <span class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-cogs text-2xl text-white"></i>
+                  </div>
+                  <span class="text-xl font-display">Legacy Systems Modernization</span>
+                </span>
+                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+              </button>
+              <div class="panel hidden px-8 pb-8" id="legacy-panel">
+                <p class="text-lg leading-relaxed text-white text-opacity-90">
+                  Looking to refactor or redesign your existing software application or platform? Perhaps you want to perform a migration to take advantage of new cloud SaaS solutions? Through my experiences at <strong>Oracle</strong> and <strong>Amazon</strong>, I have extensive experience in the safe and gradual modernization of legacy applications and platforms.
+                </p>
+              </div>
+            </div>
+
+            <!-- Shipping New Features -->
+            <div class="bg-gradient-to-br from-green-500 to-green-700 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+              <button class="w-full px-8 py-6 text-left font-medium text-white hover:bg-black hover:bg-opacity-20 focus:outline-none transition-colors flex items-center justify-between" data-target="shipping-panel" onclick="toggleAccordion(this)">
+                <span class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-shipping-fast text-2xl text-white"></i>
+                  </div>
+                  <span class="text-xl font-display">Shipping New Features</span>
+                </span>
+                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+              </button>
+              <div class="panel hidden px-8 pb-8" id="shipping-panel">
+                <p class="text-lg leading-relaxed text-white text-opacity-90">
+                  I can work in an advisory capacity, but I'm still an IC at heart, and I love to get my hands dirty. If you need support shipping a new feature, I'm happy to lend my expertise and the strong ability to execute on complex projects that I've developed throughout my career.
+                </p>
               </div>
             </div>
 
@@ -409,67 +427,20 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">Project Portfolio</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 fade-in">
-            <div class="h-48 bg-gray-100 flex flex-col items-center justify-center text-gray-400">
-              <i class="fas fa-image text-4xl mb-2"></i>
-              <p class="text-sm">Project Screenshot</p>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3 text-gray-900">Enterprise System Integration</h3>
-              <p class="text-gray-600 leading-relaxed">Coming soon - showcase of enterprise-level system integration projects.</p>
-            </div>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 fade-in">
-            <div class="h-48 bg-gray-100 flex flex-col items-center justify-center text-gray-400">
-              <i class="fas fa-image text-4xl mb-2"></i>
-              <p class="text-sm">Project Screenshot</p>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3 text-gray-900">Cloud Migration Solutions</h3>
-              <p class="text-gray-600 leading-relaxed">Coming soon - examples of successful cloud migration and modernization projects.</p>
-            </div>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 fade-in">
-            <div class="h-48 bg-gray-100 flex flex-col items-center justify-center text-gray-400">
-              <i class="fas fa-image text-4xl mb-2"></i>
-              <p class="text-sm">Project Screenshot</p>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3 text-gray-900">DevOps Automation</h3>
-              <p class="text-gray-600 leading-relaxed">Coming soon - showcase of CI/CD pipeline implementations and automation solutions.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Testimonials Section (Hidden) -->
-    <section id="testimonials" class="section section-gray testimonials-hidden">
-      <div class="container">
-        <h2 class="section-title">Client Testimonials</h2>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"Testimonials will be displayed here once available."</p>
-            <div class="testimonial-author">
-              <strong>Client Name</strong>
-              <span>Company, Title</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
+    <!-- Hire Me Section -->
     <section id="experience" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">Professional Experience</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 text-gray-900 font-display">Hire me Full Time</h2>
         
-        <div class="max-w-4xl mx-auto space-y-4">
+        <!-- Employment Status -->
+        <div class="max-w-4xl mx-auto mb-12">
+          <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-6 rounded-lg">
+            <p class="text-blue-900 text-lg"><strong>Currently Available for Consulting</strong> - I am focusing on building Conor Sloan Consultancy Ltd, but I remain open to discussing <strong>fully remote</strong> senior engineering or technical leadership roles with exceptional opportunities.</p>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto hire-grid">
           <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
             <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
               <span class="flex items-center space-x-3">
@@ -481,6 +452,71 @@
             <div class="panel hidden px-6 pb-6">
               <div class="border rounded-lg overflow-hidden">
                 <iframe width="100%" height="500px" src="dependencies/pdfjs/web/viewer.html?file=../../../files/2025-CV.pdf" class="border-0"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
+              <span class="flex items-center space-x-3">
+                <span class="text-2xl">📚</span>
+                <span>Education</span>
+              </span>
+              <i class="fas fa-chevron-down transform transition-transform"></i>
+            </button>
+            <div class="panel hidden px-6 pb-6">
+              <div class="space-y-6">
+                <div class="border-l-4 border-primary-500 pl-4">
+                  <div class="font-semibold text-gray-900 text-lg">1st Class Honours in BSc Computer Science</div>
+                  <div class="text-primary-600 font-medium">University of Leeds</div>
+                  <div class="mt-2 space-y-1 text-gray-700">
+                    <div>• Winner of the Cook Prize for "Best performance in the final year in the School of Computing"</div>
+                    <div>• Final year paper: <a href="https://github.com/conorsloan/FinalYearProject/blob/master/Report/pdf/FYP.pdf" class="text-primary-600 hover:text-primary-700 underline">An Evaluation of OpenStack</a> (1st Class)</div>
+                  </div>
+                </div>
+                
+                <div class="border-l-4 border-primary-500 pl-4">
+                  <div class="font-semibold text-gray-900 text-lg">AAA at A Level</div>
+                  <div class="text-primary-600 font-medium">Calday Grange Grammar School</div>
+                  <div class="mt-2 text-gray-700">
+                    <div>• Winner of the Computing A Level Award for highest overall score</div>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <button class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm font-medium text-gray-700 transition-colors" onclick="toggleViewTable(this, 'uni-table', 'Hide Module Grades', 'Show Module Grades')">Show Module Grades</button>
+                  <div class="uni-table hidden mt-4 overflow-hidden rounded-lg border border-gray-200">
+                    <table class="w-full">
+                      <thead class="bg-gray-50">
+                        <tr>
+                          <th class="px-4 py-3 text-left font-medium text-gray-900">Module</th>
+                          <th class="px-4 py-3 text-left font-medium text-gray-900">Grade</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-gray-200">
+                        <tr><td class="px-4 py-3 text-gray-700">Final Year Project - An Evaluation of OpenStack</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Parallel Scientific Computing</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Natural Language Processing</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Biological &amp; Bio-Inspired Computation</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Distributed Systems</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Knowledge Representation</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">User Adaptive Intelligent Systems</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Artificial Intelligence</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Interactive Database Systems</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Software Systems Engineering</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Theoretical Computer Science</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Practical Problem Solving</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Core Programming</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Modelling, Analysis &amp; Algorithm Design</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Maths for Computing</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Project Management</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Numerical Computation &amp; Visualisation</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Professional Development</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
+                        <tr><td class="px-4 py-3 text-gray-700">Computer Systems</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -558,86 +594,6 @@
                   <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
                   <div><strong class="text-gray-900">Pragmatic:</strong> <span class="text-gray-700">I favor practical, flexible solutions over rigid approaches</span></div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
-              <span class="flex items-center space-x-3">
-                <span class="text-2xl">📚</span>
-                <span>Education</span>
-              </span>
-              <i class="fas fa-chevron-down transform transition-transform"></i>
-            </button>
-            <div class="panel hidden px-6 pb-6">
-              <div class="space-y-6">
-                <div class="border-l-4 border-primary-500 pl-4">
-                  <div class="font-semibold text-gray-900 text-lg">1st Class Honours in BSc Computer Science</div>
-                  <div class="text-primary-600 font-medium">University of Leeds</div>
-                  <div class="mt-2 space-y-1 text-gray-700">
-                    <div>• Winner of the Cook Prize for "Best performance in the final year in the School of Computing"</div>
-                    <div>• Final year paper: <a href="https://github.com/conorsloan/FinalYearProject/blob/master/Report/pdf/FYP.pdf" class="text-primary-600 hover:text-primary-700 underline">An Evaluation of OpenStack</a> (1st Class)</div>
-                  </div>
-                </div>
-                
-                <div class="border-l-4 border-primary-500 pl-4">
-                  <div class="font-semibold text-gray-900 text-lg">AAA at A Level</div>
-                  <div class="text-primary-600 font-medium">Calday Grange Grammar School</div>
-                  <div class="mt-2 text-gray-700">
-                    <div>• Winner of the Computing A Level Award for highest overall score</div>
-                  </div>
-                </div>
-
-                <div class="mt-6">
-                  <button class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm font-medium text-gray-700 transition-colors" onclick="toggleViewTable(this, 'uni-table', 'Hide Module Grades', 'Show Module Grades')">Show Module Grades</button>
-                  <div class="uni-table hidden mt-4 overflow-hidden rounded-lg border border-gray-200">
-                    <table class="w-full">
-                      <thead class="bg-gray-50">
-                        <tr>
-                          <th class="px-4 py-3 text-left font-medium text-gray-900">Module</th>
-                          <th class="px-4 py-3 text-left font-medium text-gray-900">Grade</th>
-                        </tr>
-                      </thead>
-                      <tbody class="divide-y divide-gray-200">
-                        <tr><td class="px-4 py-3 text-gray-700">Final Year Project - An Evaluation of OpenStack</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Parallel Scientific Computing</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Natural Language Processing</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Biological &amp; Bio-Inspired Computation</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Distributed Systems</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Knowledge Representation</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">User Adaptive Intelligent Systems</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Artificial Intelligence</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Interactive Database Systems</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Software Systems Engineering</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Theoretical Computer Science</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Practical Problem Solving</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Core Programming</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Modelling, Analysis &amp; Algorithm Design</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Maths for Computing</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Project Management</td><td class="px-4 py-3 font-medium text-green-600">1st</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Numerical Computation &amp; Visualisation</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Professional Development</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
-                        <tr><td class="px-4 py-3 text-gray-700">Computer Systems</td><td class="px-4 py-3 font-medium text-blue-600">2:1</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-lg transition-colors flex items-center justify-between" onclick="toggleAccordion(this)">
-              <span class="flex items-center space-x-3">
-                <span class="text-2xl">🎯</span>
-                <span>Full-Time Employment</span>
-              </span>
-              <i class="fas fa-chevron-down transform transition-transform"></i>
-            </button>
-            <div class="panel hidden px-6 pb-6">
-              <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-                <p class="text-blue-800"><strong>Currently Available for Consulting</strong> - I am focusing on building Conor Sloan Consultancy Ltd, but I remain open to discussing <strong>fully remote</strong> senior engineering or technical leadership roles with exceptional opportunities.</p>
               </div>
             </div>
           </div>

@@ -1,15 +1,27 @@
 
 // Accordion functionality
 function toggleAccordion(button) {
-  const panel = button.nextElementSibling;
+  let panel;
   const chevron = button.querySelector('i.fa-chevron-down');
   
-  if (panel.classList.contains('hidden')) {
-    panel.classList.remove('hidden');
-    if (chevron) chevron.style.transform = 'rotate(180deg)';
+  // Check if button has a data-target attribute (for service panels)
+  const targetId = button.getAttribute('data-target');
+  if (targetId) {
+    panel = document.getElementById(targetId);
   } else {
-    panel.classList.add('hidden');
-    if (chevron) chevron.style.transform = 'rotate(0deg)';
+    // Fall back to finding the next sibling (for other accordions)
+    panel = button.nextElementSibling;
+  }
+  
+  // Only toggle this specific panel
+  if (panel) {
+    if (panel.classList.contains('hidden')) {
+      panel.classList.remove('hidden');
+      if (chevron) chevron.style.transform = 'rotate(180deg)';
+    } else {
+      panel.classList.add('hidden');
+      if (chevron) chevron.style.transform = 'rotate(0deg)';    
+    }
   }
 }
 
