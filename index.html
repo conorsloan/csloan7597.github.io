@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Conor Sloan Consultancy Ltd | Enterprise Software Solutions</title>
+    <title>Conor Sloan | Consultancy</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
@@ -93,6 +93,16 @@
     <meta name="keywords" content="software consulting, backend development, distributed systems, DevOps, CI/CD, containerization, enterprise solutions">
 
     <script src="js/site.js"></script>
+    
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+          publicKey: "AVNjBJnprgnDKL3fT",
+        });
+      })();
+    </script>
 
   </head>
 
@@ -682,7 +692,24 @@
           
           <div class="bg-white p-8 rounded-xl shadow-lg">
             <h3 class="text-2xl font-semibold mb-6 text-gray-900">Send a Message</h3>
-            <form action="#" method="POST" class="space-y-6">
+            
+            <!-- Success Message -->
+            <div id="success-message" class="hidden mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                <p class="text-green-700 font-medium">Message sent successfully! I'll get back to you soon.</p>
+              </div>
+            </div>
+            
+            <!-- Error Message -->
+            <div id="error-message" class="hidden mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+              <div class="flex items-center">
+                <i class="fas fa-exclamation-circle text-red-500 mr-3"></i>
+                <p class="text-red-700 font-medium">Sorry, there was an error sending your message. Please try again or email me directly.</p>
+              </div>
+            </div>
+            
+            <form id="contact-form" class="space-y-6">
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
                 <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors">
@@ -699,7 +726,12 @@
                 <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
                 <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or technical challenge..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-none"></textarea>
               </div>
-              <button type="submit" class="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transform hover:-translate-y-1 transition-all duration-200 shadow-lg">Send Message</button>
+              <button type="submit" id="submit-btn" class="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transform hover:-translate-y-1 transition-all duration-200 shadow-lg">
+                <span id="submit-text">Send Message</span>
+                <span id="submit-loading" class="hidden">
+                  <i class="fas fa-spinner fa-spin mr-2"></i>Sending...
+                </span>
+              </button>
             </form>
           </div>
         </div>
@@ -925,6 +957,66 @@
           hideCompaniesInfoBox();
           hideExpertiseInfoBox();
         }
+      });
+      
+      // EmailJS Contact Form Handler
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Get form elements
+        const submitBtn = document.getElementById('submit-btn');
+        const submitText = document.getElementById('submit-text');
+        const submitLoading = document.getElementById('submit-loading');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+        
+        // Hide any previous messages
+        successMessage.classList.add('hidden');
+        errorMessage.classList.add('hidden');
+        
+        // Show loading state
+        submitText.classList.add('hidden');
+        submitLoading.classList.remove('hidden');
+        submitBtn.disabled = true;
+        
+        // Get form data
+        const templateParams = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          company: document.getElementById('company').value || 'Not specified',
+          message: document.getElementById('message').value,
+          time: new Date().toLocaleString()
+        };
+        
+        // Send email via EmailJS
+        emailjs.send('service_zsbbxmz', 'template_tihf8np', templateParams)
+          .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            
+            // Show success message
+            successMessage.classList.remove('hidden');
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+          }, function(error) {
+            console.log('FAILED...', error);
+            
+            // Show error message
+            errorMessage.classList.remove('hidden');
+            
+            // Scroll to error message
+            errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+          }).finally(function() {
+            // Reset button state
+            submitText.classList.remove('hidden');
+            submitLoading.classList.add('hidden');
+            submitBtn.disabled = false;
+          });
       });
     </script>
   </body>
