@@ -126,9 +126,19 @@
           </nav>
           <!-- Mobile menu button -->
           <div class="md:hidden">
-            <button class="text-gray-600 hover:text-primary-600">
+            <button id="mobile-menu-button" class="text-gray-600 hover:text-primary-600">
               <i class="fas fa-bars text-xl"></i>
             </button>
+          </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+          <div class="px-4 py-6 space-y-4">
+            <a href="#about" class="block text-gray-600 hover:text-primary-600 font-medium transition-colors py-2">About</a>
+            <a href="#services" class="block text-gray-600 hover:text-primary-600 font-medium transition-colors py-2">Services</a>
+            <a href="#experience" class="block text-gray-600 hover:text-primary-600 font-medium transition-colors py-2">Hire Me Full Time</a>
+            <a href="#contact" class="block text-gray-600 hover:text-primary-600 font-medium transition-colors py-2">Contact</a>
           </div>
         </div>
       </div>
@@ -171,7 +181,7 @@
         <!-- Companies Section -->
         <div class="mb-16">
           <h3 class="text-2xl font-bold text-center mb-8 text-gray-700">Companies I've Worked For</h3>
-          <div class="flex flex-wrap justify-center items-center gap-12 md:gap-16 opacity-60">
+          <div class="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center sm:items-center gap-8 sm:gap-12 md:gap-16 opacity-60 max-w-sm sm:max-w-none mx-auto">
             <!-- Amazon -->
             <div onclick="showInfoBox('amazon')" class="flex flex-col items-center hover:opacity-100 transition-opacity duration-200 cursor-pointer">
               <div class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-2 hover:scale-105 transition-transform duration-200">
@@ -958,6 +968,37 @@
           hideExpertiseInfoBox();
         }
       });
+      
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+          
+          // Toggle hamburger icon
+          const icon = mobileMenuButton.querySelector('i');
+          if (mobileMenu.classList.contains('hidden')) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          }
+        });
+        
+        // Close mobile menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          });
+        });
+      }
       
       // EmailJS Contact Form Handler
       document.getElementById('contact-form').addEventListener('submit', function(event) {
