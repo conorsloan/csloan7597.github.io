@@ -183,6 +183,13 @@
         <div class="mb-16">
           <h3 class="text-2xl font-bold text-center mb-8 text-gray-700">Companies I've Worked For</h3>
           <div class="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center sm:items-center gap-8 sm:gap-12 md:gap-16 opacity-60 max-w-sm sm:max-w-none mx-auto">
+            <!-- Oracle -->
+            <div onclick="showInfoBox('oracle')" class="flex flex-col items-center hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+              <div class="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mb-2 hover:scale-105 transition-transform duration-200">
+                <i class="fas fa-database text-white text-2xl"></i>
+              </div>
+              <span class="text-sm font-medium text-gray-600">Oracle</span>
+            </div>
             <!-- Amazon -->
             <div onclick="showInfoBox('amazon')" class="flex flex-col items-center hover:opacity-100 transition-opacity duration-200 cursor-pointer">
               <div class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-2 hover:scale-105 transition-transform duration-200">
@@ -203,13 +210,6 @@
                 <i class="fab fa-github text-white text-2xl"></i>
               </div>
               <span class="text-sm font-medium text-gray-600">GitHub</span>
-            </div>
-            <!-- Oracle -->
-            <div onclick="showInfoBox('oracle')" class="flex flex-col items-center hover:opacity-100 transition-opacity duration-200 cursor-pointer">
-              <div class="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mb-2 hover:scale-105 transition-transform duration-200">
-                <i class="fas fa-database text-white text-2xl"></i>
-              </div>
-              <span class="text-sm font-medium text-gray-600">Oracle</span>
             </div>
           </div>
         </div>
@@ -360,7 +360,7 @@
               </button>
               <div class="panel hidden px-8 pb-8" id="ai-panel">
                 <p class="text-lg leading-relaxed text-white text-opacity-90">
-                  Ready to harness the power of AI in your organization? Working at <strong>GitHub</strong> during the AI revolution—where Copilot transformed how millions of developers work and helped drive <strong>Microsoft's</strong> AI strategy—I've seen firsthand how AI can revolutionize productivity. I can help your business identify AI opportunities, implement solutions safely, and build AI-powered features that delight your customers.
+                  Ready to harness the power of AI in your organization? Working at <strong>GitHub</strong> during the AI revolution, where Copilot transformed how millions of developers work and helped drive <strong>Microsoft's</strong> AI strategy, I've seen firsthand how AI can revolutionize productivity. I can help your business identify AI opportunities, implement solutions safely, and build AI-powered features that delight your customers.
                 </p>
               </div>
             </div>
@@ -378,7 +378,7 @@
               </button>
               <div class="panel hidden px-8 pb-8" id="distributed-panel">
                 <p class="text-lg leading-relaxed text-white text-opacity-90">
-                  Is your system struggling under its current load? I can help! I've worked on large software services like <strong>bookdepository.com</strong>, <strong>Amazon.co.uk</strong>, <strong>iCloud</strong>, and <strong>GitHub's Container Registry (ghcr.io)</strong>. I have deep understanding of scaling software systems and can ensure your business isn't a victim of its own success.
+                  Is your system struggling under its current load? I can help! I've worked on large software services like <strong>bookdepository.com</strong>, <strong>Amazon.co.uk</strong>, <strong>iCloud</strong>, and <strong>GitHub's Container Registry (ghcr.io)</strong>. I have deep understanding of scaling software systems and can ensure your business is never a victim of its own popularity.
                 </p>
               </div>
             </div>
@@ -396,7 +396,7 @@
               </button>
               <div class="panel hidden px-8 pb-8" id="sdlc-panel">
                 <p class="text-lg leading-relaxed text-white text-opacity-90">
-                  Having worked at 3 of the "Magnificent Seven" companies, and through my current role at <strong>GitHub</strong> working on Actions & Packages, I can advise organisations wishing to raise the bar on engineering excellence. Whether it's introducing CI/CD, improved testing strategies, or utilizing AI, I can help modernize your development practices.
+                  My breadth of experience across diverse organizations has exposed me to many different engineering cultures and working styles. Through my current role at <strong>GitHub</strong> working on Actions & Packages, I am deeply familiar with what it takes to build and deploy software. Whether it's implementing CI/CD pipelines, improving testing strategies, or leveraging AI tools, I can help modernize your development practices and accelerate your team's delivery.
                 </p>
               </div>
             </div>
@@ -781,25 +781,25 @@
         // Companies
         github: {
           title: "GitHub",
-          content: "Currently working as a Software Engineer focusing on GitHub Actions & Packages. Serving as Availability Champion, driving cross-organizational improvements in post-incident processes and reliability engineering practices.",
+          content: "I have been at GitHub for over 3 years now, working on GitHub Actions & Packages. During this time I've taken on various leadership roles, including acting as Availability Champion for Actions, Pages & Packages, a role which involved driving cross-organizational improvements in post-incident processes and reliability engineering practices. <br/><br/> As the lead engineer of Packages, I lead various efforts which took the Container Registry (ghcr.io), a service which receives over 1bn requests per day, from 2 to 4 9's of availability. This was achieved by fixing inefficient data access patterns, shifting traffic to read-only replicas & performing a live migration to a new DB solution.<br/><br/> At GitHub, I've grown into a strong technical leader, able to use my extensive experience to guide teams through complex technical challenges. Being here during the AI boom has also allowed me to get hands-on experience with cutting edge AI tools, something I'm very passionate about.",
           color: "linear-gradient(135deg, #6b7280 0%, #4b5563 100%)",
           icon: "fab fa-github"
         },
         apple: {
           title: "Apple",
-          content: "Worked as an ICT (Individual Contributor Technical) on iCloud services. Promoted from ICT3 to ICT4 and appointed as Tech Lead, focusing on large-scale distributed systems serving millions of users worldwide.",
+          content: "During my 6.5 years at Apple, I was part of a team which created an internal cloud platform used by many teams across Apple to build, operate and test Apple software & services. As one of the first 3 engineers on the project, I was a key part of taking this project from proof of concept to a highly scalable distributed system serving thousands of power users. <br/><br/> During my time at Apple, I was promoted from ICT3 to ICT4 and appointed as Tech Lead, a role which involved shaping the technical direction of our service based on stakeholder feedback & broader company needs.<br/><br/> At Apple, I was able to experience the full lifecycle of a product, from initial design through to launch and ongoing maintenance. I was also able to go very deep on some novel technical problems, vastly enhancing my overall technical expertise in software engineering.",
           color: "linear-gradient(135deg, #9ca3af 0%, #6b7280 100%)",
           icon: "fab fa-apple"
         },
         amazon: {
           title: "Amazon",
-          content: "Software Development Engineer working on e-commerce platforms including Amazon.co.uk and bookdepository.com. Promoted from SDE1 to SDE2 with 'outstanding' first-year review, focusing on high-traffic web services and distributed systems.",
+          content: "I worked at Amazon for around 2 years. During my time there, I worked on the replatforming of a high-traffic, global e-commerce site from a large legacy PHP monolith to a service-oriented architecture backed by AWS services. <br/><br/> After playing a crucial role in the successful launch of the new platform, I was promoted from SDE1 to SDE2. Whilst there, I also presented at Amazon's WebDevCon on mobile hybrid apps using Apache Cordova, and took part in several company-wide hackathons (and won one!). <br/><br/> At Amazon, I developed a strong customer-first mindset and a deep understanding of scalable distributed systems & cloud computing.",
           color: "linear-gradient(135deg, #fdba74 0%, #fb923c 100%)",
           icon: "fab fa-amazon"
         },
         oracle: {
           title: "Oracle",
-          content: "Software Engineer working on enterprise database and cloud solutions. Received personal recommendation from Principal Engineer for exceptional technical contributions and problem-solving abilities in complex enterprise environments.",
+          content: "My first role was at Oracle, in the OVM (Oracle Virtual Machine) QE team. This role involved the automation of infrastructure for use in complex testing of highly customisable engineered systems like the SPARC SuperCluster. The work involved extensive scripting & tool development across many domains, such as Operating Systems, Networking, Virtualization, & Storage. <br/><br/> At Oracle, I was exposed to a wide range of technologies and developed a strong foundation in systems engineering.",
           color: "linear-gradient(135deg, #fca5a5 0%, #f87171 100%)",
           icon: "fas fa-database"
         },
