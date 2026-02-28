@@ -57,12 +57,33 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
-        background-size: 20px 20px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
         pointer-events: none;
       }
+      .section-card {
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid #e2e8f0;
+        border-radius: 1rem;
+      }
+      .interactive-tile {
+        border: 1px solid #e2e8f0;
+        background: #f8fafc;
+        border-radius: 0.75rem;
+        transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      }
+      .interactive-tile:hover {
+        background: #ffffff;
+        border-color: #cbd5e1;
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+        transform: translateY(-2px);
+      }
+      .service-card {
+        border: 1px solid #dbe3eb;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      }
       .service-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
       }
       .fade-in {
         opacity: 0;
@@ -146,24 +167,24 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="gradient-bg text-white py-20">
+    <section class="gradient-bg text-white py-12 md:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="max-w-4xl mx-auto">
-          <div class="mb-6">
-            <span class="inline-block bg-white bg-opacity-20 text-white px-6 py-3 rounded-full text-lg font-medium mb-4">
+        <div class="max-w-3xl mx-auto">
+          <div class="mb-4">
+            <span class="inline-block bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-base font-medium mb-2">
               Hi, I'm Conor 🙂
             </span>
           </div>
-          <h1 class="text-4xl md:text-4xl font-bold mb-6 font-display">I help teams ship better software, faster ⚡️</h1>
-          <p class="text-xl md:text-2xl mb-6 text-white text-opacity-90 max-w-3xl mx-auto">
-            I'm a Software Engineer with 14 years experience building robust, scalable systems at elite tech companies. 
+          <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight font-display">I help teams ship better software, faster ⚡️</h1>
+          <p class="text-lg md:text-xl mb-4 text-white text-opacity-90 max-w-3xl mx-auto">
+            I'm a software engineer with 14 years of experience building robust, scalable systems at top tech companies.
           </p>
-          <div class="text-lg mb-8 max-w-2xl mx-auto text-white text-opacity-80">
-            <p>Now I help startups and scale-ups modernize their tech stack, fix their CI/CD, and build the kind of software that customers love - the kind that works 🚀</p>
+          <div class="text-base md:text-lg mb-6 max-w-2xl mx-auto text-white text-opacity-80">
+            <p>Now I help startups and scale-ups modernize their stack, improve CI/CD, and ship software customers can trust 🚀</p>
           </div>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-200 shadow-lg">Let's Talk About Your Project</a>
-            <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-200">See How I Can Help</a>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="#contact" class="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-200 shadow-lg">Let's Talk About Your Project</a>
+            <a href="#services" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-200">See How I Can Help</a>
           </div>
         </div>
       </div>
@@ -175,102 +196,102 @@
         <h2 class="text-4xl font-bold text-center mb-8 text-gray-900 font-display">A Little About Me</h2>
         <div class="max-w-2xl mx-auto text-center mb-16">
           <p class="text-lg text-gray-600">
-            Click on any item below to learn more about my experience and expertise.
+            Click any item below to see relevant experience.
           </p>
         </div>
 
         <!-- Companies Section -->
-        <div class="mb-16">
-          <h3 class="text-2xl font-bold text-center mb-8 text-gray-700">Companies I've Worked For</h3>
-          <div class="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center sm:items-center gap-8 sm:gap-12 md:gap-16 opacity-60 max-w-sm sm:max-w-none mx-auto">
+        <div class="mb-16 section-card p-6 sm:p-8">
+          <h3 class="text-2xl font-semibold text-center mb-8 text-slate-700">Companies I've Worked For</h3>
+          <div class="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center sm:items-center gap-6 sm:gap-8 md:gap-10 max-w-md sm:max-w-none mx-auto">
             <!-- Oracle -->
-            <div onclick="showInfoBox('oracle')" class="flex flex-col items-center hover:opacity-100 transition-opacity duration-200 cursor-pointer">
-              <div class="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mb-2 hover:scale-105 transition-transform duration-200">
-                <i class="fas fa-database text-white text-2xl"></i>
+            <div onclick="showInfoBox('oracle')" class="group flex flex-col items-center cursor-pointer transition-transform duration-200 hover:-translate-y-0.5">
+              <div class="w-16 h-16 bg-red-50 border border-red-100 rounded-xl flex items-center justify-center mb-2 transition-colors duration-200 group-hover:bg-red-100">
+                <i class="fas fa-database text-red-700 text-2xl"></i>
               </div>
-              <span class="text-sm font-medium text-gray-600">Oracle</span>
+              <span class="text-sm font-medium text-slate-600">Oracle</span>
             </div>
             <!-- Amazon -->
-            <div onclick="showInfoBox('amazon')" class="flex flex-col items-center hover:opacity-100 transition-opacity duration-200 cursor-pointer">
-              <div class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-2 hover:scale-105 transition-transform duration-200">
-                <i class="fab fa-amazon text-white text-2xl"></i>
+            <div onclick="showInfoBox('amazon')" class="group flex flex-col items-center cursor-pointer transition-transform duration-200 hover:-translate-y-0.5">
+              <div class="w-16 h-16 bg-amber-50 border border-amber-100 rounded-xl flex items-center justify-center mb-2 transition-colors duration-200 group-hover:bg-amber-100">
+                <i class="fab fa-amazon text-amber-700 text-2xl"></i>
               </div>
-              <span class="text-sm font-medium text-gray-600">Amazon</span>
+              <span class="text-sm font-medium text-slate-600">Amazon</span>
             </div>
             <!-- Apple -->
-            <div onclick="showInfoBox('apple')" class="flex flex-col items-center hover:opacity-100 transition-opacity duration-200 cursor-pointer">
-              <div class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center mb-2 hover:scale-105 transition-transform duration-200">
-                <i class="fab fa-apple text-white text-2xl"></i>
+            <div onclick="showInfoBox('apple')" class="group flex flex-col items-center cursor-pointer transition-transform duration-200 hover:-translate-y-0.5">
+              <div class="w-16 h-16 bg-slate-100 border border-slate-200 rounded-xl flex items-center justify-center mb-2 transition-colors duration-200 group-hover:bg-slate-200">
+                <i class="fab fa-apple text-slate-700 text-2xl"></i>
               </div>
-              <span class="text-sm font-medium text-gray-600">Apple</span>
+              <span class="text-sm font-medium text-slate-600">Apple</span>
             </div>
             <!-- GitHub -->
-            <div onclick="showInfoBox('github')" class="flex flex-col items-center hover:opacity-100 transition-opacity duration-200 cursor-pointer">
-              <div class="w-16 h-16 bg-gray-900 rounded-lg flex items-center justify-center mb-2 hover:scale-105 transition-transform duration-200">
-                <i class="fab fa-github text-white text-2xl"></i>
+            <div onclick="showInfoBox('github')" class="group flex flex-col items-center cursor-pointer transition-transform duration-200 hover:-translate-y-0.5">
+              <div class="w-16 h-16 bg-slate-100 border border-slate-200 rounded-xl flex items-center justify-center mb-2 transition-colors duration-200 group-hover:bg-slate-200">
+                <i class="fab fa-github text-slate-800 text-2xl"></i>
               </div>
-              <span class="text-sm font-medium text-gray-600">GitHub</span>
+              <span class="text-sm font-medium text-slate-600">GitHub</span>
             </div>
           </div>
-        </div>
 
-        <!-- Info Box for Companies section -->
-        <div id="companies-info-box" class="hidden mt-8 mb-12 max-w-4xl mx-auto">
-          <div id="companies-info-box-content" class="gradient-bg text-white p-8 rounded-2xl shadow-xl relative">
-            <button onclick="hideCompaniesInfoBox()" class="absolute top-4 right-4 text-white hover:text-gray-200 text-2xl transition-colors">
-              <i class="fas fa-times"></i>
-            </button>
-            <div id="companies-info-content">
-              <!-- Content will be inserted here -->
+          <!-- Info Box for Companies section -->
+          <div id="companies-info-box" class="hidden mt-8">
+            <div id="companies-info-box-content" class="bg-white border border-slate-200 p-6 sm:p-8 rounded-xl shadow-sm relative">
+              <button onclick="hideCompaniesInfoBox()" class="absolute top-3 right-4 text-slate-400 hover:text-slate-600 text-2xl transition-colors">
+                <i class="fas fa-times"></i>
+              </button>
+              <div id="companies-info-content">
+                <!-- Content will be inserted here -->
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Areas of Expertise -->
-        <div>
-          <h3 class="text-2xl font-bold text-center mb-8 text-gray-700">Areas of Expertise</h3>
+        <div class="section-card p-6 sm:p-8">
+          <h3 class="text-2xl font-semibold text-center mb-8 text-slate-700">Areas of Expertise</h3>
           
           <!-- Technical Expertise Row -->
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
             <!-- Agentic AI -->
-            <div onclick="showInfoBox('ai')" class="flex flex-col items-center p-4 bg-indigo-50 rounded-xl hover:bg-indigo-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-indigo-300 rounded-lg flex items-center justify-center mb-3">
-                <i class="fas fa-robot text-white text-xl"></i>
+            <div onclick="showInfoBox('ai')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-indigo-100 border border-indigo-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fas fa-robot text-indigo-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">Agentic AI</span>
             </div>
             <!-- Backend Systems -->
-            <div onclick="showInfoBox('backend')" class="flex flex-col items-center p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-blue-300 rounded-lg flex items-center justify-center mb-3">
-                <i class="fas fa-server text-white text-xl"></i>
+            <div onclick="showInfoBox('backend')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-blue-100 border border-blue-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fas fa-server text-blue-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">Backend Systems</span>
             </div>
             <!-- Containerization -->
-            <div onclick="showInfoBox('containerization')" class="flex flex-col items-center p-4 bg-sky-50 rounded-xl hover:bg-sky-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-sky-400 rounded-lg flex items-center justify-center mb-3">
-                <i class="fab fa-docker text-white text-xl"></i>
+            <div onclick="showInfoBox('containerization')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-sky-100 border border-sky-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fab fa-docker text-sky-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">Containerization</span>
             </div>
             <!-- DevOps & CI/CD -->
-            <div onclick="showInfoBox('devops')" class="flex flex-col items-center p-4 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-purple-300 rounded-lg flex items-center justify-center mb-3">
-                <i class="fas fa-code-branch text-white text-xl"></i>
+            <div onclick="showInfoBox('devops')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-violet-100 border border-violet-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fas fa-code-branch text-violet-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">DevOps & CI/CD</span>
             </div>
             <!-- Distributed Systems -->
-            <div onclick="showInfoBox('distributed')" class="flex flex-col items-center p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-green-300 rounded-lg flex items-center justify-center mb-3">
-                <i class="fas fa-network-wired text-white text-xl"></i>
+            <div onclick="showInfoBox('distributed')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-emerald-100 border border-emerald-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fas fa-network-wired text-emerald-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">Distributed Systems</span>
             </div>
             <!-- High Availability -->
-            <div onclick="showInfoBox('availability')" class="flex flex-col items-center p-4 bg-teal-50 rounded-xl hover:bg-teal-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-teal-300 rounded-lg flex items-center justify-center mb-3">
-                <i class="fas fa-shield-alt text-white text-xl"></i>
+            <div onclick="showInfoBox('availability')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-teal-100 border border-teal-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fas fa-shield-alt text-teal-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">High Availability</span>
             </div>
@@ -279,58 +300,58 @@
           <!-- Tech Stack Row -->
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <!-- AWS -->
-            <div onclick="showInfoBox('aws')" class="flex flex-col items-center p-4 bg-orange-50 rounded-xl hover:bg-orange-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-orange-300 rounded-lg flex items-center justify-center mb-3">
-                <i class="fab fa-aws text-white text-xl"></i>
+            <div onclick="showInfoBox('aws')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-amber-100 border border-amber-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fab fa-aws text-amber-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">AWS</span>
             </div>
             <!-- Azure -->
-            <div onclick="showInfoBox('azure')" class="flex flex-col items-center p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-blue-400 rounded-lg flex items-center justify-center mb-3">
-                <i class="fab fa-microsoft text-white text-xl"></i>
+            <div onclick="showInfoBox('azure')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-cyan-100 border border-cyan-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fab fa-microsoft text-cyan-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">Azure</span>
             </div>
             <!-- GitHub -->
-            <div onclick="showInfoBox('githubactions')" class="flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-slate-400 rounded-lg flex items-center justify-center mb-3">
-                <i class="fab fa-github-alt text-white text-xl"></i>
+            <div onclick="showInfoBox('githubactions')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-slate-100 border border-slate-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fab fa-github-alt text-slate-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">GitHub</span>
             </div>
             <!-- Go -->
-            <div onclick="showInfoBox('go')" class="flex flex-col items-center p-4 bg-cyan-50 rounded-xl hover:bg-cyan-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-cyan-300 rounded-lg flex items-center justify-center mb-3">
-                <i class="fas fa-code text-white text-xl"></i>
+            <div onclick="showInfoBox('go')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-cyan-100 border border-cyan-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fas fa-code text-cyan-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">Go</span>
             </div>
             <!-- Java -->
-            <div onclick="showInfoBox('java')" class="flex flex-col items-center p-4 bg-red-50 rounded-xl hover:bg-red-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-red-300 rounded-lg flex items-center justify-center mb-3">
-                <i class="fab fa-java text-white text-xl"></i>
+            <div onclick="showInfoBox('java')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-rose-100 border border-rose-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fab fa-java text-rose-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">Java</span>
             </div>
             <!-- Python -->
-            <div onclick="showInfoBox('python')" class="flex flex-col items-center p-4 bg-yellow-50 rounded-xl hover:bg-yellow-100 transition-colors cursor-pointer">
-              <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-3">
-                <i class="fab fa-python text-white text-xl"></i>
+            <div onclick="showInfoBox('python')" class="interactive-tile flex flex-col items-center p-4 cursor-pointer">
+              <div class="w-12 h-12 bg-yellow-100 border border-yellow-200 rounded-lg flex items-center justify-center mb-3">
+                <i class="fab fa-python text-yellow-700 text-xl"></i>
               </div>
               <span class="text-sm font-semibold text-gray-900">Python</span>
             </div>
           </div>
-        </div>
 
-        <!-- Info Box for Areas of Expertise section -->
-        <div id="expertise-info-box" class="hidden mt-8 mb-12 max-w-4xl mx-auto">
-          <div id="expertise-info-box-content" class="gradient-bg text-white p-8 rounded-2xl shadow-xl relative">
-            <button onclick="hideExpertiseInfoBox()" class="absolute top-4 right-4 text-white hover:text-gray-200 text-2xl transition-colors">
-              <i class="fas fa-times"></i>
-            </button>
-            <div id="expertise-info-content">
-              <!-- Content will be inserted here -->
+          <!-- Info Box for Areas of Expertise section -->
+          <div id="expertise-info-box" class="hidden mt-8">
+            <div id="expertise-info-box-content" class="bg-white border border-slate-200 p-6 sm:p-8 rounded-xl shadow-sm relative">
+              <button onclick="hideExpertiseInfoBox()" class="absolute top-3 right-4 text-slate-400 hover:text-slate-600 text-2xl transition-colors">
+                <i class="fas fa-times"></i>
+              </button>
+              <div id="expertise-info-content">
+                <!-- Content will be inserted here -->
+              </div>
             </div>
           </div>
         </div>
@@ -344,113 +365,113 @@
         <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 font-display">How I Can Help</h2>
         
         <!-- Services Accordions Grid -->
-        <div class="mb-16">
+        <div class="mb-16 section-card p-6 sm:p-8">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto services-grid">
             
             <!-- AI Adoption & Integration -->
-            <div class="bg-gradient-to-br from-indigo-300 to-purple-400 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <button class="w-full px-8 py-6 text-left font-medium text-white focus:outline-none transition-colors flex items-center justify-between" data-target="ai-panel" onclick="toggleAccordion(this)">
+            <div class="service-card bg-slate-50 rounded-xl overflow-hidden transition-all duration-300" style="border-color: #c7d2fe;">
+              <button class="w-full px-8 py-6 text-left font-semibold text-slate-900 focus:outline-none transition-colors hover:bg-white/70 flex items-center justify-between" data-target="ai-panel" onclick="toggleAccordion(this)">
                 <span class="flex items-center space-x-4">
-                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-brain text-2xl text-white"></i>
+                  <div class="w-10 h-10 bg-indigo-100 border border-indigo-200 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-brain text-xl text-indigo-700"></i>
                   </div>
-                  <span class="text-xl font-display">AI Adoption & Integration</span>
+                  <span class="text-xl font-semibold tracking-tight">AI Adoption & Integration</span>
                 </span>
-                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+                <i class="fas fa-chevron-down transform transition-transform text-slate-500"></i>
               </button>
               <div class="panel hidden px-8 pb-8" id="ai-panel">
-                <p class="text-lg leading-relaxed text-white text-opacity-90">
-                  Ready to harness the power of AI in your organization? Working at <strong>GitHub</strong> during the AI revolution, where Copilot transformed how millions of developers work and helped drive <strong>Microsoft's</strong> AI strategy, I've seen firsthand how AI can revolutionize productivity. I can help your business identify AI opportunities, implement solutions safely, and build AI-powered features that delight your customers.
+                <p class="text-lg leading-relaxed text-slate-700">
+                  Want to use AI practically and safely? At <strong>GitHub</strong> during the Copilot era, I saw how AI can improve developer productivity at scale. I can help identify high-value use cases, implement responsibly, and ship AI-powered features customers use.
                 </p>
               </div>
             </div>
 
             <!-- Distributed Systems at Scale -->
-            <div class="bg-gradient-to-br from-orange-300 to-red-400 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <button class="w-full px-8 py-6 text-left font-medium text-white focus:outline-none transition-colors flex items-center justify-between" data-target="distributed-panel" onclick="toggleAccordion(this)">
+            <div class="service-card bg-slate-50 rounded-xl overflow-hidden transition-all duration-300" style="border-color: #fde68a;">
+              <button class="w-full px-8 py-6 text-left font-semibold text-slate-900 focus:outline-none transition-colors hover:bg-white/70 flex items-center justify-between" data-target="distributed-panel" onclick="toggleAccordion(this)">
                 <span class="flex items-center space-x-4">
-                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-project-diagram text-2xl text-white"></i>
+                  <div class="w-10 h-10 bg-amber-100 border border-amber-200 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-project-diagram text-xl text-amber-700"></i>
                   </div>
-                  <span class="text-xl font-display">Distributed Systems at Scale</span>
+                  <span class="text-xl font-semibold tracking-tight">Distributed Systems at Scale</span>
                 </span>
-                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+                <i class="fas fa-chevron-down transform transition-transform text-slate-500"></i>
               </button>
               <div class="panel hidden px-8 pb-8" id="distributed-panel">
-                <p class="text-lg leading-relaxed text-white text-opacity-90">
-                  Is your system struggling under its current load? I can help! I've worked on large software services like <strong>bookdepository.com</strong>, <strong>Amazon.co.uk</strong>, <strong>iCloud</strong>, and <strong>GitHub's Container Registry (ghcr.io)</strong>. I have deep understanding of scaling software systems and can ensure your business is never a victim of its own popularity.
+                <p class="text-lg leading-relaxed text-slate-700">
+                  Need to scale reliably? I've worked on high-traffic systems including <strong>bookdepository.com</strong>, <strong>Amazon.co.uk</strong>, <strong>iCloud</strong>, and <strong>GitHub's Container Registry (ghcr.io)</strong>. I can help remove bottlenecks and scale without sacrificing reliability.
                 </p>
               </div>
             </div>
 
             <!-- Enhancing Software Development Lifecycle -->
-            <div class="bg-gradient-to-br from-blue-300 to-blue-500 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <button class="w-full px-8 py-6 text-left font-medium text-white focus:outline-none transition-colors flex items-center justify-between" data-target="sdlc-panel" onclick="toggleAccordion(this)">
+            <div class="service-card bg-slate-50 rounded-xl overflow-hidden transition-all duration-300" style="border-color: #bae6fd;">
+              <button class="w-full px-8 py-6 text-left font-semibold text-slate-900 focus:outline-none transition-colors hover:bg-white/70 flex items-center justify-between" data-target="sdlc-panel" onclick="toggleAccordion(this)">
                 <span class="flex items-center space-x-4">
-                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-rocket text-2xl text-white"></i>
+                  <div class="w-10 h-10 bg-sky-100 border border-sky-200 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-rocket text-xl text-sky-700"></i>
                   </div>
-                  <span class="text-xl font-display">Enhancing Software Development Lifecycle</span>
+                  <span class="text-xl font-semibold tracking-tight">Enhancing Software Development Lifecycle</span>
                 </span>
-                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+                <i class="fas fa-chevron-down transform transition-transform text-slate-500"></i>
               </button>
               <div class="panel hidden px-8 pb-8" id="sdlc-panel">
-                <p class="text-lg leading-relaxed text-white text-opacity-90">
-                  My breadth of experience across diverse organizations has exposed me to many different engineering cultures and working styles. Through my current role at <strong>GitHub</strong> working on Actions & Packages, I am deeply familiar with what it takes to build and deploy software. Whether it's implementing CI/CD pipelines, improving testing strategies, or leveraging AI tools, I can help modernize your development practices and accelerate your team's delivery.
+                <p class="text-lg leading-relaxed text-slate-700">
+                  Across Oracle, Amazon, Apple, and <strong>GitHub</strong>, I've worked in different engineering cultures and delivery models. I can improve CI/CD, testing, and developer workflows so your team ships faster with fewer regressions.
                 </p>
               </div>
             </div>
 
             <!-- High Availability & Reliability -->
-            <div class="bg-gradient-to-br from-teal-300 to-cyan-400 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <button class="w-full px-8 py-6 text-left font-medium text-white focus:outline-none transition-colors flex items-center justify-between" data-target="availability-panel" onclick="toggleAccordion(this)">
+            <div class="service-card bg-slate-50 rounded-xl overflow-hidden transition-all duration-300" style="border-color: #99f6e4;">
+              <button class="w-full px-8 py-6 text-left font-semibold text-slate-900 focus:outline-none transition-colors hover:bg-white/70 flex items-center justify-between" data-target="availability-panel" onclick="toggleAccordion(this)">
                 <span class="flex items-center space-x-4">
-                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-shield-alt text-2xl text-white"></i>
+                  <div class="w-10 h-10 bg-teal-100 border border-teal-200 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-xl text-teal-700"></i>
                   </div>
-                  <span class="text-xl font-display">High Availability & Reliability</span>
+                  <span class="text-xl font-semibold tracking-tight">High Availability & Reliability</span>
                 </span>
-                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+                <i class="fas fa-chevron-down transform transition-transform text-slate-500"></i>
               </button>
               <div class="panel hidden px-8 pb-8" id="availability-panel">
-                <p class="text-lg leading-relaxed text-white text-opacity-90">
-                  Online services should strive for 99.9% or even 99.99% availability. At <strong>GitHub</strong>, I acted as Availability Champion for Actions, Packages & Pages. I'm keenly aware of what it takes to keep services running, even during disaster recovery scenarios, and can help define post-incident processes for continuous organizational learning.
+                <p class="text-lg leading-relaxed text-slate-700">
+                  I help teams design for 99.9%+ uptime. At <strong>GitHub</strong>, I served as Availability Champion for Actions, Packages, and Pages. I can help with resilience design, recovery readiness, and post-incident improvement.
                 </p>
               </div>
             </div>
 
             <!-- Legacy Systems Modernization -->
-            <div class="bg-gradient-to-br from-purple-300 to-purple-500 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <button class="w-full px-8 py-6 text-left font-medium text-white focus:outline-none transition-colors flex items-center justify-between" data-target="legacy-panel" onclick="toggleAccordion(this)">
+            <div class="service-card bg-slate-50 rounded-xl overflow-hidden transition-all duration-300" style="border-color: #ddd6fe;">
+              <button class="w-full px-8 py-6 text-left font-semibold text-slate-900 focus:outline-none transition-colors hover:bg-white/70 flex items-center justify-between" data-target="legacy-panel" onclick="toggleAccordion(this)">
                 <span class="flex items-center space-x-4">
-                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-cogs text-2xl text-white"></i>
+                  <div class="w-10 h-10 bg-violet-100 border border-violet-200 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-cogs text-xl text-violet-700"></i>
                   </div>
-                  <span class="text-xl font-display">Legacy Systems Modernization</span>
+                  <span class="text-xl font-semibold tracking-tight">Legacy Systems Modernization</span>
                 </span>
-                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+                <i class="fas fa-chevron-down transform transition-transform text-slate-500"></i>
               </button>
               <div class="panel hidden px-8 pb-8" id="legacy-panel">
-                <p class="text-lg leading-relaxed text-white text-opacity-90">
-                  Looking to refactor or redesign your existing software application or platform? Perhaps you want to perform a migration to take advantage of new cloud SaaS solutions? Through my experiences at <strong>Oracle</strong> and <strong>Amazon</strong>, I have extensive experience in the safe and gradual modernization of legacy applications and platforms.
+                <p class="text-lg leading-relaxed text-slate-700">
+                  Modernizing a legacy platform? I can help plan and deliver safe, gradual migrations. Through work at <strong>Oracle</strong> and <strong>Amazon</strong>, I've led replatforming efforts without disrupting core business operations.
                 </p>
               </div>
             </div>
 
             <!-- Shipping New Features -->
-            <div class="bg-gradient-to-br from-green-300 to-green-500 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <button class="w-full px-8 py-6 text-left font-medium text-white focus:outline-none transition-colors flex items-center justify-between" data-target="shipping-panel" onclick="toggleAccordion(this)">
+            <div class="service-card bg-slate-50 rounded-xl overflow-hidden transition-all duration-300" style="border-color: #a7f3d0;">
+              <button class="w-full px-8 py-6 text-left font-semibold text-slate-900 focus:outline-none transition-colors hover:bg-white/70 flex items-center justify-between" data-target="shipping-panel" onclick="toggleAccordion(this)">
                 <span class="flex items-center space-x-4">
-                  <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-shipping-fast text-2xl text-white"></i>
+                  <div class="w-10 h-10 bg-emerald-100 border border-emerald-200 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-shipping-fast text-xl text-emerald-700"></i>
                   </div>
-                  <span class="text-xl font-display">Shipping New Features</span>
+                  <span class="text-xl font-semibold tracking-tight">Shipping New Features</span>
                 </span>
-                <i class="fas fa-chevron-down transform transition-transform text-white"></i>
+                <i class="fas fa-chevron-down transform transition-transform text-slate-500"></i>
               </button>
               <div class="panel hidden px-8 pb-8" id="shipping-panel">
-                <p class="text-lg leading-relaxed text-white text-opacity-90">
-                  I can work in an advisory capacity, but I'm still an IC at heart, and I love to get my hands dirty. If you need support shipping a new feature, I'm happy to lend my expertise and the strong ability to execute on complex projects that I've developed throughout my career.
+                <p class="text-lg leading-relaxed text-slate-700">
+                  I can advise, but I'm still an IC at heart. If you need support shipping a complex feature, I can embed with your team and help deliver it.
                 </p>
               </div>
             </div>
@@ -590,27 +611,27 @@
             <div class="panel hidden px-6 pb-6">
               <div class="space-y-4">
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">GitHub:</strong> <span class="text-gray-700">Availability Champion for GitHub Actions & Packages, driving cross-org improvements in post-incident processes</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">Apple:</strong> <span class="text-gray-700">Promoted from ICT3 to ICT4 and appointed as Tech Lead</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">Amazon:</strong> <span class="text-gray-700">Promoted from SDE1 to SDE2 with 'outstanding' first-year review</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">Speaking:</strong> <span class="text-gray-700">Presented at Amazon's WebDevCon on mobile hybrid apps using Apache Cordova</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">BT:</strong> <span class="text-gray-700">Ranked joint-highest of 10 interns at BT GES Summer Research Internship</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">Oracle:</strong> <span class="text-gray-700">Received <a href="https://drive.google.com/file/d/0B2HMk1AmTvyATFFicUVXbUtzZ3M/view?usp=sharing" class="text-primary-600 hover:text-primary-700 underline">personal recommendation</a> from Principal Engineer</span></div>
                 </div>
               </div>
@@ -629,27 +650,27 @@
               <p class="text-gray-700 mb-4">My approach to consulting and technical leadership:</p>
               <div class="space-y-3">
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">Inquisitive:</strong> <span class="text-gray-700">I ask detailed questions and thoroughly research solutions before implementation</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">Architectural:</strong> <span class="text-gray-700">I excel at designing systems and architectures while staying hands-on with code</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">Adaptable:</strong> <span class="text-gray-700">I prioritize adaptability over narrow specialization, learning quickly across domains</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">Collaborative:</strong> <span class="text-gray-700">I value presentation skills, idea discussion, and building strong professional relationships</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">People-focused:</strong> <span class="text-gray-700">I believe team happiness and collaboration are essential for successful projects</span></div>
                 </div>
                 <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2"></div>
+                  <div class="w-2 h-2 bg-primary-600 rounded-full mt-2 shrink-0"></div>
                   <div><strong class="text-gray-900">Pragmatic:</strong> <span class="text-gray-700">I favor practical, flexible solutions over rigid approaches</span></div>
                 </div>
               </div>
@@ -668,6 +689,12 @@
             <div>
               <h3 class="text-2xl font-semibold mb-4 text-gray-900">Ready to discuss your project?</h3>
               <p class="text-lg text-gray-600 leading-relaxed">I'd love to hear about your technical challenges and explore how I can help your organization succeed.</p>
+              <div class="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
+                <div class="flex items-start space-x-3">
+                  <i class="fas fa-info-circle text-amber-700 mt-1"></i>
+                  <p class="text-sm sm:text-base text-amber-900 leading-relaxed">Please note that, as a full-time employee at GitHub (and by extension Microsoft), I cannot participate in projects that compete directly or indirectly with either company, as this would create a conflict of interest. Thank you for your understanding.</p>
+                </div>
+              </div>
             </div>
             
             <div class="space-y-6">
@@ -754,7 +781,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div class="col-span-1 md:col-span-2">
-            <h3 class="text-2xl font-bold mb-4 font-display">Conor Sloan Consultancy Ltd</h3>
+            <h3 class="text-2xl font-bold mb-4 font-display">Sloan Consultancy Ltd</h3>
             <p class="text-gray-300 text-lg mb-6">Software Consultant based in Merseyside, UK</p>
             <div class="flex space-x-6">
               <a href="https://www.linkedin.com/in/csloan7597/" class="text-gray-400 hover:text-primary-400 transition-colors text-2xl">
@@ -770,7 +797,7 @@
           </div>
         </div>
         <div class="border-t border-gray-800 pt-8 text-center">
-          <p class="text-gray-400">&copy; 2025 Conor Sloan Consultancy Ltd. All rights reserved.</p>
+          <p class="text-gray-400">&copy; 2026 Sloan Consultancy Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -781,102 +808,102 @@
         // Companies
         github: {
           title: "GitHub",
-          content: "I have been at GitHub for over 3 years now, working on GitHub Actions & Packages. During this time I've taken on various leadership roles, including acting as Availability Champion for Actions, Pages & Packages, a role which involved driving cross-organizational improvements in post-incident processes and reliability engineering practices. <br/><br/> As the lead engineer of Packages, I lead various efforts which took the Container Registry (ghcr.io), a service which receives over 1bn requests per day, from 2 to 4 9's of availability. This was achieved by fixing inefficient data access patterns, shifting traffic to read-only replicas & performing a live migration to a new DB solution.<br/><br/> At GitHub, I've grown into a strong technical leader, able to use my extensive experience to guide teams through complex technical challenges. Being here during the AI boom has also allowed me to get hands-on experience with cutting edge AI tools, something I'm very passionate about.",
-          color: "linear-gradient(135deg, #6b7280 0%, #4b5563 100%)",
+          content: "At GitHub, I work on Actions & Packages and have held leadership roles including Availability Champion for Actions, Pages, and Packages, driving cross-org reliability improvements. <br/><br/> As lead engineer for Packages, I helped take Container Registry (ghcr.io, 1B+ requests/day) from two to four nines by improving data access, shifting read traffic to replicas, and leading a live database migration. <br/><br/> The role has strengthened both my technical leadership and hands-on experience with modern AI tooling.",
+          color: "linear-gradient(135deg, #64748b 0%, #475569 100%)",
           icon: "fab fa-github"
         },
         apple: {
           title: "Apple",
-          content: "During my 6.5 years at Apple, I was part of a team which created an internal cloud platform used by many teams across Apple to build, operate and test Apple software & services. As one of the first 3 engineers on the project, I was a key part of taking this project from proof of concept to a highly scalable distributed system serving thousands of power users. <br/><br/> During my time at Apple, I was promoted from ICT3 to ICT4 and appointed as Tech Lead, a role which involved shaping the technical direction of our service based on stakeholder feedback & broader company needs.<br/><br/> At Apple, I was able to experience the full lifecycle of a product, from initial design through to launch and ongoing maintenance. I was also able to go very deep on some novel technical problems, vastly enhancing my overall technical expertise in software engineering.",
-          color: "linear-gradient(135deg, #9ca3af 0%, #6b7280 100%)",
+          content: "At Apple, I spent 6.5 years on an internal cloud platform used to build, test, and operate Apple software and services. As one of the first three engineers, I helped grow it from proof of concept into a scalable distributed system for thousands of users. <br/><br/> I was promoted from ICT3 to ICT4, became Tech Lead, and helped shape technical direction with stakeholders. <br/><br/> I also gained end-to-end product experience from design through launch and long-term operation.",
+          color: "linear-gradient(135deg, #71717a 0%, #52525b 100%)",
           icon: "fab fa-apple"
         },
         amazon: {
           title: "Amazon",
-          content: "I worked at Amazon for around 2 years. During my time there, I worked on the replatforming of a high-traffic, global e-commerce site from a large legacy PHP monolith to a service-oriented architecture backed by AWS services. <br/><br/> After playing a crucial role in the successful launch of the new platform, I was promoted from SDE1 to SDE2. Whilst there, I also presented at Amazon's WebDevCon on mobile hybrid apps using Apache Cordova, and took part in several company-wide hackathons (and won one!). <br/><br/> At Amazon, I developed a strong customer-first mindset and a deep understanding of scalable distributed systems & cloud computing.",
-          color: "linear-gradient(135deg, #fdba74 0%, #fb923c 100%)",
+          content: "At Amazon, I spent about two years helping replatform a high-traffic global e-commerce site from a PHP monolith to a service-oriented architecture on AWS. <br/><br/> After helping deliver a successful launch, I was promoted from SDE1 to SDE2. I also spoke at WebDevCon on Apache Cordova and took part in hackathons, winning one. <br/><br/> The role sharpened my customer focus and large-scale distributed systems skills.",
+          color: "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
           icon: "fab fa-amazon"
         },
         oracle: {
           title: "Oracle",
-          content: "My first role was at Oracle, in the OVM (Oracle Virtual Machine) QE team. This role involved the automation of infrastructure for use in complex testing of highly customisable engineered systems like the SPARC SuperCluster. The work involved extensive scripting & tool development across many domains, such as Operating Systems, Networking, Virtualization, & Storage. <br/><br/> At Oracle, I was exposed to a wide range of technologies and developed a strong foundation in systems engineering.",
-          color: "linear-gradient(135deg, #fca5a5 0%, #f87171 100%)",
+          content: "I started at Oracle in the OVM (Oracle Virtual Machine) QE team, automating infrastructure for complex testing of engineered systems like SPARC SuperCluster. The work covered OS, networking, virtualization, and storage automation. <br/><br/> It gave me a strong cross-domain systems engineering foundation.",
+          color: "linear-gradient(135deg, #be123c 0%, #9f1239 100%)",
           icon: "fas fa-database"
         },
 
         // Technical Expertise
         backend: {
           title: "Backend Systems",
-          content: "I have extensive experience building robust, scalable backend services using Java, Go, Python and Swift. My expertise includes RESTful APIs, service-oriented architecture, database design, and performance optimization for high-traffic applications.",
-          color: "linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%)",
+          content: "I build scalable backend services in Java, Go, Python, and Swift, with strengths in APIs, service architecture, database design, and performance tuning.",
+          color: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
           icon: "fas fa-server"
         },
         distributed: {
           title: "Distributed Systems",
-          content: "As a Computer Science graduate and through my experience with Amazon & Apple, I retain a deep understanding of distributed system patterns, consistency models, and fault tolerance. I have experience with service discovery, load balancing, distributed caching, and building systems that can handle millions, even billions, of requests per day.",
-          color: "linear-gradient(135deg, #86efac 0%, #4ade80 100%)",
+          content: "I design distributed systems with strong foundations in consistency, fault tolerance, service discovery, load balancing, and caching, including systems serving billions of requests per day.",
+          color: "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)",
           icon: "fas fa-network-wired"
         },
         containerization: {
           title: "Containerization",
-          content: "I am proficient with Docker and Kubernetes for containerizing applications and orchestrating deployments. I have experience with container registries (and am the lead engineer for GitHub's container registry, ghcr.io), service meshes, and building cloud-native applications with container-first architecture.",
-          color: "linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%)",
+          content: "I use Docker and Kubernetes to package and run cloud-native workloads. I also lead GitHub's container registry (ghcr.io), with experience in registries, orchestration, and container-first architecture.",
+          color: "linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)",
           icon: "fab fa-docker"
         },
         devops: {
           title: "DevOps & CI/CD",
-          content: "My time working on GitHub Actions has given me a deep understanding of how to build and maintain CI/CD pipelines using Actions, Jenkins, and other tools. My focus is on automation, infrastructure as code, monitoring, and creating developer-friendly deployment processes.",
-          color: "linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%)",
+          content: "I've built and operated CI/CD systems using GitHub Actions, Jenkins, and related tooling, with focus on automation, infrastructure as code, observability, and developer experience.",
+          color: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
           icon: "fas fa-code-branch"
         },
         ai: {
           title: "Agentic AI",
-          content: "Being at GitHub means being an early adoptor of AI technologies; I have hands-on experience in building AI-powered features and integrating AI capabilities into production systems. This includes experience with LLMs, prompt engineering, and AI-driven automation workflows.",
-          color: "linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%)",
+          content: "At GitHub, I've worked with AI early and directly, including LLM-powered features, prompt engineering, and automation workflows in production.",
+          color: "linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)",
           icon: "fas fa-robot"
         },
         availability: {
           title: "High Availability",
-          content: "I specialize in building systems that achieve at least 99.9% uptime, but I have experience taking services to 99.99% and beyond. I have experience with disaster recovery, failover strategies, monitoring and alerting, post-incident analysis, and designing for resilience at scale.",
-          color: "linear-gradient(135deg, #5eead4 0%, #2dd4bf 100%)",
+          content: "I help teams reach and sustain 99.9%+ uptime, with experience in disaster recovery, failover, monitoring, incident response, and resilient system design.",
+          color: "linear-gradient(135deg, #14b8a6 0%, #0f766e 100%)",
           icon: "fas fa-shield-alt"
         },
 
         // Tech Stack
         java: {
           title: "Java",
-          content: "I have 5+ years of professional Java development experience across enterprise applications, web services, and distributed systems. I'm proficient with Spring Framework, Hibernate, and modern Java features for building robust, maintainable applications.",
-          color: "linear-gradient(135deg, #fca5a5 0%, #f87171 100%)",
+          content: "I have 5+ years of Java experience across enterprise apps, web services, and distributed systems, including Spring, Hibernate, and modern Java patterns.",
+          color: "linear-gradient(135deg, #ef4444 0%, #dc2626 100%)",
           icon: "fab fa-java"
         },
         go: {
           title: "Go",
-          content: "Go is my primary programming language, and I've used it throughout my time at Apple and GitHub. I have extensive experience with Go for building high-performance backend services, APIs, and microservices. I appreciate Go's simplicity, concurrency model, and excellent tooling for cloud-native development.",
-          color: "linear-gradient(135deg, #67e8f9 0%, #06b6d4 100%)",
+          content: "Go is my primary language across Apple and GitHub. I use it to build high-performance services, APIs, and microservices, especially for cloud-native systems.",
+          color: "linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)",
           icon: "fas fa-code"
         },
         python: {
           title: "Python",
-          content: "I'm proficient in Python for backend development, automation, data processing, and AI/ML applications. More recently, I mostly use Python in AI/ML learning experiments.",
-          color: "linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%)",
+          content: "I use Python for backend development, automation, data processing, and AI/ML experiments.",
+          color: "linear-gradient(135deg, #eab308 0%, #ca8a04 100%)",
           icon: "fab fa-python"
         },
         aws: {
           title: "AWS",
-          content: "Through working at Amazon and GitHub, I've developed comprehensive experience with Amazon Web Services including EC2, S3, RDS, Lambda, ECS, and many other services. I am skilled in designing cloud-native architectures and optimizing for cost and performance.",
-          color: "linear-gradient(135deg, #fdba74 0%, #fb923c 100%)",
+          content: "I've used AWS extensively (EC2, S3, RDS, Lambda, ECS, and more) to design cloud architectures optimized for reliability, performance, and cost.",
+          color: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
           icon: "fab fa-aws"
         },
         azure: {
           title: "Azure",
-          content: "My experience with the Azure cloud platform comes from my time at GitHub (a Microsoft company), and includes compute, storage, and platform services. Familiar with Azure DevOps, App Services, and integration with Microsoft ecosystem technologies.",
-          color: "linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%)",
+          content: "I have hands-on Azure experience through GitHub/Microsoft, including core compute, storage, and platform services plus Microsoft ecosystem integrations.",
+          color: "linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)",
           icon: "fab fa-microsoft"
         },
         githubactions: {
           title: "GitHub",
-          content: "I have developed deep expertise in GitHub from both user and contributor perspectives. I currently work on the GitHub platform itself, with extensive knowledge of Actions, Packages, workflow automation, custom actions, and CI/CD best practices.",
-          color: "linear-gradient(135deg, #64748b 0%, #475569 100%)",
+          content: "I have deep GitHub platform expertise as both user and contributor, especially Actions, Packages, automation workflows, custom actions, and CI/CD best practices.",
+          color: "linear-gradient(135deg, #475569 0%, #334155 100%)",
           icon: "fab fa-github-alt"
         }
       };
@@ -900,51 +927,47 @@
 
       function showCompaniesInfoBox(item) {
         const infoBox = document.getElementById('companies-info-box');
-        const infoBoxContent = document.getElementById('companies-info-box-content');
         const content = document.getElementById('companies-info-content');
         const data = infoData[item];
-        
-        // Update the background gradient to match the clicked item
-        infoBoxContent.style.background = data.color;
-        
-        // Update content with matching icon in title
+
         content.innerHTML = `
-          <h3 class="text-2xl font-bold mb-4 text-white flex items-center">
-            ${data.title}
-            <i class="${data.icon} ml-3 text-2xl"></i>
+          <div class="h-1.5 w-24 rounded-full mb-4" style="background: ${data.color};"></div>
+          <h3 class="text-2xl font-semibold mb-4 text-slate-900 flex items-center pr-8">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-lg text-white shadow-sm" style="background: ${data.color}; border: 1px solid rgba(255, 255, 255, 0.25);">
+              <i class="${data.icon} text-lg"></i>
+            </span>
+            <span class="ml-3">${data.title}</span>
           </h3>
-          <p class="text-white text-opacity-90 leading-relaxed text-lg">${data.content}</p>
+          <p class="text-slate-700 leading-relaxed text-lg">${data.content}</p>
         `;
         infoBox.classList.remove('hidden');
         
         // Smooth scroll to the info box
         setTimeout(() => {
-          infoBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          infoBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 100);
       }
 
       function showExpertiseInfoBox(item) {
         const infoBox = document.getElementById('expertise-info-box');
-        const infoBoxContent = document.getElementById('expertise-info-box-content');
         const content = document.getElementById('expertise-info-content');
         const data = infoData[item];
-        
-        // Update the background gradient to match the clicked item
-        infoBoxContent.style.background = data.color;
-        
-        // Update content with matching icon in title
+
         content.innerHTML = `
-          <h3 class="text-2xl font-bold mb-4 text-white flex items-center">
-            ${data.title}
-            <i class="${data.icon} ml-3 text-2xl"></i>
+          <div class="h-1.5 w-24 rounded-full mb-4" style="background: ${data.color};"></div>
+          <h3 class="text-2xl font-semibold mb-4 text-slate-900 flex items-center pr-8">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-lg text-white shadow-sm" style="background: ${data.color}; border: 1px solid rgba(255, 255, 255, 0.25);">
+              <i class="${data.icon} text-lg"></i>
+            </span>
+            <span class="ml-3">${data.title}</span>
           </h3>
-          <p class="text-white text-opacity-90 leading-relaxed text-lg">${data.content}</p>
+          <p class="text-slate-700 leading-relaxed text-lg">${data.content}</p>
         `;
         infoBox.classList.remove('hidden');
         
         // Smooth scroll to the info box
         setTimeout(() => {
-          infoBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          infoBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 100);
       }
 
